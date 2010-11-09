@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83C07415-FCD5-439C-96BE-0E78EADACABE}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnterpriseProject</RootNamespace>
+    <AssemblyName>EnterpriseProject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>&lt;Objects&gt;&lt;ObjectGroup Name="ApplicationServices-Deployment" Order="1"&gt;&lt;Destination Path="Data Source=.\SQLEXPRESS%3bAttachDbFilename=&amp;quot%3bC:\Users\Jonathan\Documents\Visual Studio 2010\Projects\EnterpriseProject\EnterpriseProject\App_Data\ASPNETDB.MDF&amp;quot%3b%3bIntegrated Security=True%3bConnect Timeout=30%3bUser Instance=True" /&gt;&lt;Object Type="dbFullSql"&gt;&lt;PreSource Path="Data Source=.\SQLEXPRESS%3bAttachDbFilename=|DataDirectory|aspnetdb.mdf%3bIntegrated Security=True%3bUser Instance=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" /&gt;&lt;Source Path="obj\Debug\AutoScripts\ApplicationServices-Deployment_SchemaOnly.sql" Transacted="True" /&gt;&lt;/Object&gt;&lt;/ObjectGroup&gt;&lt;/Objects&gt;</PublishDatabaseSettings>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcContrib">
+      <HintPath>MVCContrib.release\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.FluentHtml">
+      <HintPath>MVCContrib.release\MvcContrib.FluentHtml.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.TestHelper">
+      <HintPath>MVCContrib.release\MvcContrib.TestHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcMembership">
+      <HintPath>..\..\MembershipStarterKit\MvcMembership\bin\Debug\MvcMembership.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\..\MembershipStarterKit\MvcMembership\bin\Debug\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\UserAdministration\Controllers\UserAdministrationController.cs" />
+    <Compile Include="Areas\UserAdministration\Models\UserAdministration\DetailsViewModel.cs" />
+    <Compile Include="Areas\UserAdministration\Models\UserAdministration\IndexViewModel.cs" />
+    <Compile Include="Areas\UserAdministration\Models\UserAdministration\RoleViewModel.cs" />
+    <Compile Include="Areas\UserAdministration\UserAdministrationAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ASPNETDB.MDF" />
+    <Content Include="App_Data\ASPNETDB_log.ldf">
+      <DependentUpon>ASPNETDB.MDF</DependentUpon>
+    </Content>
+    <Content Include="Areas\UserAdministration\Views\UserAdministration\Details.aspx" />
+    <Content Include="Areas\UserAdministration\Views\UserAdministration\Index.aspx" />
+    <Content Include="Areas\UserAdministration\Views\UserAdministration\Password.aspx" />
+    <Content Include="Areas\UserAdministration\Views\UserAdministration\Role.aspx" />
+    <Content Include="Areas\UserAdministration\Views\UserAdministration\UsersRoles.aspx" />
+    <Content Include="Content\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Content\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Content\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Content\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Content\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Content\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Content\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Content\jquery-ui-1.8.6.custom.css" />
+    <Content Include="Content\MvcMembership.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.6.custom.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\UserAdministration\Views\Web.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1783</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
