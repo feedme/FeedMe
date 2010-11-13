@@ -5,12 +5,12 @@
 </asp:Content>
 
 <asp:Content ID="loginContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Log On</h2>
+    <h1>Log On</h1>
     <p>
         Please enter your username and password. <%: Html.ActionLink("Register", "Register") %> if you don't have an account.
     </p>
 
-    <% using (Html.BeginForm()) { %>
+    <% using (Html.BeginForm("HandleForm", "Home")) { %>
         <%: Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.") %>
         <div>
             <fieldset>

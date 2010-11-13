@@ -5,31 +5,52 @@ to use a different color start by replacing all instances of
 ----------------------------------------------------------*/
 body
 {
-    background-color: #e0e0e0;
-    font-size: .75em;
-    font-family: Verdana, Helvetica, Sans-Serif;
+    background-color: #066E95;
+    font-size: .8em;
+    font-family: Sans-Serif;
     margin: 0;
     padding: 0;
     color: #696969;
+    background-image: url(images/bg4.gif);
+    background-repeat:repeat-x;
 }
 
 a:link
 {
-    color: #034af3;
-    text-decoration: underline;
+    color: #7EB543;
+    text-decoration: none;
+    font-weight:bold;
+    font-size:1.1em;
 }
 a:visited
 {
-    color: #505abc;
+    color: #7EB543;
+    font-weight:bold;
+    text-decoration: none;
+    font-size:1.1em;
 }
 a:hover
 {
-    color: #1d60ff;
+    color: #7EB543;
     text-decoration: none;
+    font-weight:bold;
+    font-size:1.1em;
 }
 a:active
 {
-    color: #12eb87;
+    color: #7EB543;
+    font-weight:bold;
+    text-decoration: none;
+    font-size:1.1em;
+}
+
+a#logo-feedme{
+	height:100px;
+	background-image:url(images/logo.png);
+	float:left;
+	display:block;
+	width:250px;
+	margin-top:-20px;
 }
 
 p, ul
@@ -43,19 +64,29 @@ p, ul
 h1, h2, h3, h4, h5, h6
 {
     font-size: 1.5em;
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
+    color:#eee;
+    font-family: sans-serif;
+    font-weight:bold;
+    padding:1em;
+    margin-top:0;
 }
 
 h1
 {
     font-size: 2em;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    color:#eee;
+    background-color:#388BAA;
+    background-image: url(images/title-bg5.png);
+    background-repeat:no-repeat;
+    padding:1em;
+    padding-left:180px;
+    -moz-border-radius: 15px;
+    margin-top:0;
+    font-weight:bold;
 }
 h2
 {
-    padding: 0 0 10px 0;
+
 }
 h3
 {
@@ -94,9 +125,14 @@ page width. Or, you can specify an exact pixel width. */
     position: relative;
     margin-bottom: 2em;
     color: #000;
-    -moz-border-radius: 0 0 5px 5px;
-    background-color: White;
-    padding:1.5em;
+    height:80px;
+    -moz-border-radius: 0 0 15px 15px;
+    /*border: 3px solid #e0e0e0;*/
+    background-color: #eee;
+    padding:1em;
+    
+    /*background-image: url(images/header-bg.png);
+    background-repeat:repeat-x;*/
 }
 
 #header h1
@@ -104,15 +140,16 @@ page width. Or, you can specify an exact pixel width. */
     font-weight: bold;
     margin-top: 0;
     color: #000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 
 #main
 {
     padding: 1em;
     background-color: #fff;
+    border: 3px solid #e0e0e0;
     margin-bottom: 30px;
-    -moz-border-radius: 5px;
+    -moz-border-radius: 15px;
     _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
 }
 
@@ -130,7 +167,6 @@ page width. Or, you can specify an exact pixel width. */
 ----------------------------------------------------------*/
 ul#menu
 {
-    padding: 0 0 2px;
     position: relative;
     margin: 0;
     text-align: center;
@@ -157,27 +193,22 @@ ul#menu li a
     font-weight: bold;
     text-decoration: none;
     line-height: 2.8em;
-    background-color: white;
-    color: #034af3;
+    background-color: #eee;
+    color: #066E95;
     -moz-border-radius: 15px 15px 0 0;
 }
 
 ul#menu li a:hover
 {
-    background-color: #fff;
+    background-color: #7EB543;
+    color: #eee;
     text-decoration: none;
 }
 
-ul#menu li a:active
+ul#menu li a.selected
 {
-    background-color: #a6e2a6;
-    text-decoration: none;
-}
-
-ul#menu li.selected a
-{
-    background-color: #fff;
-    color: #000;
+    background-color: #7EB543;
+    color: #eee;
 }
 
 /* FORM LAYOUT ELEMENTS   
@@ -205,17 +236,47 @@ legend
 input[type="text"] 
 {
     width: 200px;
-    border: 1px solid #CCC;
+    border:1px solid #84D2EE;
+    color:#528394;
+    font-size:1em;
+    height:20px;
+    padding:3px 7px;
+    -moz-border-radius: 15px;
 }
 
 input[type="password"] 
 {
     width: 200px;
-    border: 1px solid #CCC;
+    border:1px solid #84D2EE;
+    color:#528394;
+    font-size:1em;
+    height:20px;
+    padding:3px 7px;
+    -moz-border-radius: 15px;
+}
+
+.textOutputBlue{
+    background-color:#007be4;
+    font-size:1em;
+    color: white;
+    padding:1em;
+    -moz-border-radius: 15px;
+    text-align:right;
+    font-weight:bold;
+    width:30%;
+}
+
+.textOutputNoh {
+    border:1px solid #84D2EE;
+    color:#528394;
+    font-size:1em;
+    padding:1em;
+    -moz-border-radius: 15px;
+    font-weight:bold;
 }
 
 /* TABLE
-----------------------------------------------------------*/
+----------------------------------------------------------
 
 table 
 {
@@ -235,7 +296,7 @@ table th
   text-align: left;
   background-color: #e8eef4; 
   border: solid 1px #e8eef4;   
-}
+}*/
 
 /* MISC  
 ----------------------------------------------------------*/
@@ -261,27 +322,12 @@ div#title
     font-size:1.1em;
     display:block;
     text-align:right;
-    margin:10px;
+    float:right;
+    width:575px;
+    height:80px;
     color:black;
 }
 
-#logindisplay a:link
-{
-    color: blue;
-    text-decoration: underline;
-}
-
-#logindisplay a:visited
-{
-    color: red;
-    text-decoration: underline;
-}
-
-#logindisplay a:hover
-{
-    color: green;
-    text-decoration: none;
-}
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
@@ -335,4 +381,76 @@ div#title
 .tri-state
 {
     width: 6em;
+}
+
+/*-------------------------*/
+
+#filtering-nav .blue_button {
+    background-color: #066E95;
+    font-weight: bold;
+    color: #eee;
+    text-decoration: none;
+}
+
+#filtering-nav .blue_button:hover {
+    background-color: #7EB543;
+    font-weight: bold;
+    color: #eee;
+}
+
+#filtering-nav .blue_button.selected {
+    background-color: #7EB543;
+    font-weight: bold;
+    color: #eee;
+}
+
+#filtering-nav .black_button {
+    background-color: #1f1f1f;
+    font-weight: bold;
+    color: #eee;
+    text-decoration: none;
+}
+
+#filtering-nav .black_button:hover {
+    background-color: #eee;
+    font-weight: bold;
+    color: #1f1f1f;
+}
+
+#filtering-nav .all { background-color: #FFF;}
+
+#filtering-nav {
+    padding: 0;
+    /*margin: 2em 0;*/
+}
+
+#filtering-nav li {
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+}
+
+#filtering-nav li a {
+    text-align: center;
+    display: block;
+    padding: .5em 1.0em;
+    margin-right: 5px;
+    background-image: -moz-linear-gradient(-90deg,
+        hsla(0,0%,100%,.4),
+        hsla(0,0%,100%,.0) 50%,
+        hsla(0,0%,0%,.0) 50%,
+        hsla(0,0%,0%,.1) 100%
+    );
+    background-image: -webkit-gradient(linear, 0 top, 0 bottom,
+        from(hsla(0,0%,100%,.4)),
+        color-stop(50%, hsla(0,0%,100%,.0)),
+        color-stop(50%, hsla(0,0%,0%,.0)),
+        to(hsla(0,0%,0%,.1))
+    );
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px hsla(0,0%,0%,.3);
+       -moz-box-shadow: 0 1px 2px hsla(0,0%,0%,.3);
+            box-shadow: 0 1px 2px hsla(0,0%,0%,.3);
 }

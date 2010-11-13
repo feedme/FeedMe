@@ -14,6 +14,7 @@
     <script type="text/javascript">
         $(function () {
             $("#accordion").accordion();
+            $("button,input:submit,input:button").button();
         });
 	</script>
 
@@ -22,13 +23,22 @@
 <body>
     <div class="page">
 
-        <div id="header">
-            <div id="title">
-                <h1>My MVC Application</h1>
-            </div>
-              
+        <div id="header" >
+            <%= Html.ActionLink(" ", "Index", "Home", new { Area = "" }, new { id = "logo-feedme" })%>
             <div id="logindisplay">
-                <% Html.RenderPartial("LogOnUserControl"); %>
+                <%
+                    if (Request.IsAuthenticated) {
+                %>
+                       <% Html.RenderPartial("navigation_bar"); %>
+                <%
+                    }
+                    else {
+                %> 
+                        <% Html.RenderPartial("logon"); %>
+                <%
+                    }
+                %>
+                
             </div> 
            
         </div>
@@ -36,10 +46,10 @@
         <div id="menucontainer">
             
             <ul id="menu">              
-                <li><%: Html.ActionLink("Home", "Index", "Home", new { Area = "" }, new { })%></li>
-                <li><%: Html.ActionLink("About", "About", "Home", new { Area = "" }, new { })%></li>
+                <li><%: Html.ActionLink("Home", "Index", "Home", new { Area = "" }, new {id="home_link" })%></li>
+                <li><%: Html.ActionLink("About", "About", "Home", new { Area = "" }, new {id="about_link" })%></li>
                     <% if (Roles.IsUserInRole("Administrator")){ %>
-                        <li><%= Html.ActionLink("User Administration", "Index", "UserAdministration", new { Area = "UserAdministration" }, new { })%></li>
+                        <li><%= Html.ActionLink("User Administration", "Index", "UserAdministration", new { Area = "UserAdministration" }, new { id="admin_link"})%></li>
                     <% } %>
             </ul>
             

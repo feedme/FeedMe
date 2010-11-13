@@ -8,7 +8,7 @@
 
 	<link href='<% =Url.Content("~/Content/MvcMembership.css") %>' rel="stylesheet" type="text/css" />
 
-	<h2 class="mvcMembership">User Administration</h2>
+	<h1 class="mvcMembership">User Administration</h1>
 	
 	<h3 class="mvcMembership">Users</h3>
 	<div class="mvcMembership-allUsers">
