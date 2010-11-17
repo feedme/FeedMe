@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using System.Web.Security;
 using MvcMembership;
 using MvcMembership.Settings;
+using EnterpriseProject.Models;
 using SampleWebsite.Areas.UserAdministration.Models.UserAdministration;
 
 namespace SampleWebsite.Areas.UserAdministration.Controllers
@@ -12,6 +13,7 @@ namespace SampleWebsite.Areas.UserAdministration.Controllers
 	[Authorize(Roles = "Administrator")]
 	public class UserAdministrationController : Controller
 	{
+        private VendorsRepository vendorsRepository = new VendorsRepository();
 		private const int PageSize = 10;
 		private const string ResetPasswordBody = "Your new password is: ";
 		private const string ResetPasswordFromAddress = "from@domain.com";
@@ -61,6 +63,24 @@ namespace SampleWebsite.Areas.UserAdministration.Controllers
 			_rolesService.Create(id);
 			return RedirectToAction("Index");
 		}
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public RedirectToRouteResult CreateVendor(System.Guid id)
+        {
+            Vendor vendor = new Vendor();
+            vendor.VendorId = System.Guid.NewGuid();
+            vendor.UserId = id;
+
+            if (TryUpdateModel(vendor))
+            {
+                vendorsRepository.add(vendor);
+                vendorsRepository.save();
+                _rolesService.AddToRole(_userService.Get(id), "Vendor");
+                return RedirectToAction("index");
+            }
+
+            return RedirectToAction("Index");
+        }
 
 		[AcceptVerbs(HttpVerbs.Post)]
 		public RedirectToRouteResult DeleteRole(string id)

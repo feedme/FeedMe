@@ -16,9 +16,9 @@
 <table width=100%>
     <tr style="">
         <td valign="top">
-        <p>Welcome to FeedMe, an application that will settle that rumbling in your stomach!. To get started 
+        <h2>Welcome to FeedMe, an application that will settle that rumbling in your stomach!.</h2><h3>To get started 
         you should <%= Html.ActionLink("Register", "Register", "Account", new { Area = "" },null)%> for a new account. Then 
-        when you login you can access our menus!, ordering exactly what you want when you want it. Enjoy!</p>
+        when you login you can access our menus!, ordering exactly what you want when you want it. Enjoy!</h3>
         </td>
         <td style="width:30%">
             <div id="accordion">

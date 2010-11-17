@@ -18,6 +18,11 @@
 			<li>
 				<span class="mvcMembership-username"><% =Html.ActionLink(user.UserName, "Details", new{ id = user.ProviderUserKey}) %></span>
 				<span class="mvcMembership-email"><a href="mailto:<%: user.Email %>"><%: user.Email %></a></span>
+                <span>Make Vendor
+                    <% using(Html.BeginForm("CreateVendor", "UserAdministration", new{id=user.ProviderUserKey})){ %>
+				        <input type="submit" value="Create" />
+				    <% } %>
+                </span>
 				<% if(user.IsOnline){ %>
 					<span class="mvcMembership-isOnline">Online</span>
 				<% }else{ %>

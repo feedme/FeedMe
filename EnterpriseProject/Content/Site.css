@@ -86,11 +86,12 @@ h1
 }
 h2
 {
-
+    color:#505050;
 }
 h3
 {
     font-size: 1.2em;
+    color:#a9a9a9;
 }
 h4
 {
@@ -123,10 +124,11 @@ page width. Or, you can specify an exact pixel width. */
 #header
 {
     position: relative;
+    margin-top: 1em;
     margin-bottom: 2em;
     color: #000;
     height:80px;
-    -moz-border-radius: 0 0 15px 15px;
+    -moz-border-radius: 15px;
     /*border: 3px solid #e0e0e0;*/
     background-color: #eee;
     padding:1em;
