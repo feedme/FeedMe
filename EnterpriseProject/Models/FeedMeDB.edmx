@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ASPNETDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="ASPNETDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="ASPNETDBModelStoreContainer">
           <EntitySet Name="aspnet_Membership" EntityType="ASPNETDBModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="aspnet_Profile" EntityType="ASPNETDBModel.Store.aspnet_Profile" store:Type="Tables" Schema="dbo" />
@@ -12,17 +12,18 @@
           <EntitySet Name="aspnet_Users" EntityType="ASPNETDBModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="aspnet_UsersInRoles" EntityType="ASPNETDBModel.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Items" EntityType="ASPNETDBModel.Store.Items" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Menu_Items" EntityType="ASPNETDBModel.Store.Menu_Items" store:Type="Tables" store:Schema="dbo" store:Name="Menu_Items">
+          <EntitySet Name="MenuItems" EntityType="ASPNETDBModel.Store.MenuItems" store:Type="Tables" store:Schema="dbo" store:Name="MenuItems">
             <DefiningQuery>SELECT 
-      [Menu_Items].[MenuId] AS [MenuId], 
-      [Menu_Items].[ItemId] AS [ItemId]
-      FROM [dbo].[Menu_Items] AS [Menu_Items]</DefiningQuery>
+      [MenuItems].[MenuId] AS [MenuId], 
+      [MenuItems].[ItemId] AS [ItemId]
+      FROM [dbo].[MenuItems] AS [MenuItems]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Menus" EntityType="ASPNETDBModel.Store.Menus" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Order_Items" EntityType="ASPNETDBModel.Store.Order_Items" store:Type="Tables" store:Schema="dbo" store:Name="Order_Items">
             <DefiningQuery>SELECT 
       [Order_Items].[OrderId] AS [OrderId], 
-      [Order_Items].[ItemId] AS [ItemId]
+      [Order_Items].[ItemId] AS [ItemId], 
+      [Order_Items].[Quantity] AS [Quantity]
       FROM [dbo].[Order_Items] AS [Order_Items]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="Orders" EntityType="ASPNETDBModel.Store.Orders" store:Type="Tables" Schema="dbo" />
@@ -43,13 +44,17 @@
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
           </AssociationSet>
-          <AssociationSet Name="FK_Menu_Items_Items" Association="ASPNETDBModel.Store.FK_Menu_Items_Items">
+          <AssociationSet Name="FK_Items_Vendors" Association="ASPNETDBModel.Store.FK_Items_Vendors">
+            <End Role="Vendors" EntitySet="Vendors" />
             <End Role="Items" EntitySet="Items" />
-            <End Role="Menu_Items" EntitySet="Menu_Items" />
           </AssociationSet>
-          <AssociationSet Name="FK_Menu_Items_Menus" Association="ASPNETDBModel.Store.FK_Menu_Items_Menus">
+          <AssociationSet Name="FK_MenuItems_Items" Association="ASPNETDBModel.Store.FK_MenuItems_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="MenuItems" EntitySet="MenuItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuItems_Menus" Association="ASPNETDBModel.Store.FK_MenuItems_Menus">
             <End Role="Menus" EntitySet="Menus" />
-            <End Role="Menu_Items" EntitySet="Menu_Items" />
+            <End Role="MenuItems" EntitySet="MenuItems" />
           </AssociationSet>
           <AssociationSet Name="FK_Menus_Vendors" Association="ASPNETDBModel.Store.FK_Menus_Vendors">
             <End Role="Vendors" EntitySet="Vendors" />
@@ -150,11 +155,12 @@
           <Property Name="Name" Type="nchar" Nullable="false" MaxLength="20" />
           <Property Name="Description" Type="nchar" Nullable="false" MaxLength="300" />
           <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="VendorId" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C:\USERS\JONATHAN\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\ENTERPRISEPROJECT\ENTERPRISEPROJECT\APP_DATA\ASPNETDB.MDF.dbo.Menu_Items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'C:\USERS\JONATHAN\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\ENTERPRISEPROJECT\ENTERPRISEPROJECT\APP_DATA\ASPNETDB.MDF.dbo.MenuItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
-        <EntityType Name="Menu_Items">
+        <EntityType Name="MenuItems">
           <Key>
             <PropertyRef Name="MenuId" />
             <PropertyRef Name="ItemId" />
@@ -168,6 +174,7 @@
           </Key>
           <Property Name="MenuId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="VendorId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="300" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'C:\USERS\JONATHAN\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\ENTERPRISEPROJECT\ENTERPRISEPROJECT\APP_DATA\ASPNETDB.MDF.dbo.Order_Items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -176,9 +183,11 @@
           <Key>
             <PropertyRef Name="OrderId" />
             <PropertyRef Name="ItemId" />
+            <PropertyRef Name="Quantity" />
           </Key>
           <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="ItemId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -243,26 +252,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Menu_Items_Items">
+        <Association Name="FK_Items_Vendors">
+          <End Role="Vendors" Type="ASPNETDBModel.Store.Vendors" Multiplicity="1" />
+          <End Role="Items" Type="ASPNETDBModel.Store.Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendors">
+              <PropertyRef Name="VendorId" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="VendorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuItems_Items">
           <End Role="Items" Type="ASPNETDBModel.Store.Items" Multiplicity="1" />
-          <End Role="Menu_Items" Type="ASPNETDBModel.Store.Menu_Items" Multiplicity="*" />
+          <End Role="MenuItems" Type="ASPNETDBModel.Store.MenuItems" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Items">
               <PropertyRef Name="ItemId" />
             </Principal>
-            <Dependent Role="Menu_Items">
+            <Dependent Role="MenuItems">
               <PropertyRef Name="ItemId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Menu_Items_Menus">
+        <Association Name="FK_MenuItems_Menus">
           <End Role="Menus" Type="ASPNETDBModel.Store.Menus" Multiplicity="1" />
-          <End Role="Menu_Items" Type="ASPNETDBModel.Store.Menu_Items" Multiplicity="*" />
+          <End Role="MenuItems" Type="ASPNETDBModel.Store.MenuItems" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Menus">
               <PropertyRef Name="MenuId" />
             </Principal>
-            <Dependent Role="Menu_Items">
+            <Dependent Role="MenuItems">
               <PropertyRef Name="MenuId" />
             </Dependent>
           </ReferentialConstraint>
@@ -339,8 +360,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ASPNETDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -351,6 +371,7 @@
           <EntitySet Name="aspnet_Users" EntityType="ASPNETDBModel.aspnet_Users" />
           <EntitySet Name="Items" EntityType="ASPNETDBModel.Item" />
           <EntitySet Name="Menus" EntityType="ASPNETDBModel.Menu" />
+          <EntitySet Name="OrderItems" EntityType="ASPNETDBModel.Order_Items" />
           <EntitySet Name="Orders" EntityType="ASPNETDBModel.Order" />
           <EntitySet Name="Vendors" EntityType="ASPNETDBModel.Vendor" />
           <AssociationSet Name="FK__aspnet_Me__UserI__22AA2996" Association="ASPNETDBModel.FK__aspnet_Me__UserI__22AA2996">
@@ -369,9 +390,21 @@
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="Vendors" EntitySet="Vendors" />
           </AssociationSet>
+          <AssociationSet Name="FK_Items_Vendors" Association="ASPNETDBModel.FK_Items_Vendors">
+            <End Role="Vendors" EntitySet="Vendors" />
+            <End Role="Items" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Items_Items" Association="ASPNETDBModel.FK_Order_Items_Items">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Order_Items" EntitySet="OrderItems" />
+          </AssociationSet>
           <AssociationSet Name="FK_Menus_Vendors" Association="ASPNETDBModel.FK_Menus_Vendors">
             <End Role="Vendors" EntitySet="Vendors" />
             <End Role="Menus" EntitySet="Menus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Items_Orders" Association="ASPNETDBModel.FK_Order_Items_Orders">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Order_Items" EntitySet="OrderItems" />
           </AssociationSet>
           <AssociationSet Name="FK_Orders_Vendors" Association="ASPNETDBModel.FK_Orders_Vendors">
             <End Role="Vendors" EntitySet="Vendors" />
@@ -381,13 +414,14 @@
             <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
           </AssociationSet>
-          <AssociationSet Name="Menu_Items" Association="ASPNETDBModel.Menu_Items">
-            <End Role="Items" EntitySet="Items" />
-            <End Role="Menus" EntitySet="Menus" />
+          <EntitySet Name="MenuItems" EntityType="ASPNETDBModel.MenuItems" />
+          <AssociationSet Name="FK_MenuItems_Items" Association="ASPNETDBModel.FK_MenuItems_Items">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="MenuItem" EntitySet="MenuItems" />
           </AssociationSet>
-          <AssociationSet Name="Order_Items" Association="ASPNETDBModel.Order_Items">
-            <End Role="Items" EntitySet="Items" />
-            <End Role="Orders" EntitySet="Orders" />
+          <AssociationSet Name="FK_MenuItems_Menus" Association="ASPNETDBModel.FK_MenuItems_Menus">
+            <End Role="Menu" EntitySet="Menus" />
+            <End Role="MenuItem" EntitySet="MenuItems" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="aspnet_Membership">
@@ -464,8 +498,10 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="true" />
           <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-          <NavigationProperty Name="Menus" Relationship="ASPNETDBModel.Menu_Items" FromRole="Items" ToRole="Menus" />
-          <NavigationProperty Name="Orders" Relationship="ASPNETDBModel.Order_Items" FromRole="Items" ToRole="Orders" />
+          <Property Name="VendorId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Vendor" Relationship="ASPNETDBModel.FK_Items_Vendors" FromRole="Items" ToRole="Vendors" />
+          <NavigationProperty Name="Order_Items" Relationship="ASPNETDBModel.FK_Order_Items_Items" FromRole="Items" ToRole="Order_Items" />
+          <NavigationProperty Name="MenuItems" Relationship="ASPNETDBModel.FK_MenuItems_Items" FromRole="Item" ToRole="MenuItem" />
         </EntityType>
         <EntityType Name="Menu">
           <Key>
@@ -473,8 +509,21 @@
           </Key>
           <Property Name="MenuId" Type="Guid" Nullable="false" />
           <Property Name="VendorId" Type="Guid" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Vendor" Relationship="ASPNETDBModel.FK_Menus_Vendors" FromRole="Menus" ToRole="Vendors" />
-          <NavigationProperty Name="Items" Relationship="ASPNETDBModel.Menu_Items" FromRole="Menus" ToRole="Items" />
+          <NavigationProperty Name="MenuItems" Relationship="ASPNETDBModel.FK_MenuItems_Menus" FromRole="Menu" ToRole="MenuItem" />
+        </EntityType>
+        <EntityType Name="Order_Items">
+          <Key>
+            <PropertyRef Name="OrderId" />
+            <PropertyRef Name="ItemId" />
+            <PropertyRef Name="Quantity" />
+          </Key>
+          <Property Name="OrderId" Type="Guid" Nullable="false" />
+          <Property Name="ItemId" Type="Guid" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Item" Relationship="ASPNETDBModel.FK_Order_Items_Items" FromRole="Order_Items" ToRole="Items" />
+          <NavigationProperty Name="Order" Relationship="ASPNETDBModel.FK_Order_Items_Orders" FromRole="Order_Items" ToRole="Orders" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -484,8 +533,8 @@
           <Property Name="UserId" Type="Guid" Nullable="false" />
           <Property Name="VendorId" Type="Guid" Nullable="false" />
           <NavigationProperty Name="aspnet_Users" Relationship="ASPNETDBModel.FK_Orders_aspnet_Users" FromRole="Orders" ToRole="aspnet_Users" />
+          <NavigationProperty Name="Order_Items" Relationship="ASPNETDBModel.FK_Order_Items_Orders" FromRole="Orders" ToRole="Order_Items" />
           <NavigationProperty Name="Vendor" Relationship="ASPNETDBModel.FK_Orders_Vendors" FromRole="Orders" ToRole="Vendors" />
-          <NavigationProperty Name="Items" Relationship="ASPNETDBModel.Order_Items" FromRole="Orders" ToRole="Items" />
         </EntityType>
         <EntityType Name="Vendor">
           <Key>
@@ -494,6 +543,7 @@
           <Property Name="VendorId" Type="Guid" Nullable="false" />
           <Property Name="UserId" Type="Guid" Nullable="false" />
           <NavigationProperty Name="aspnet_Users" Relationship="ASPNETDBModel.FK_Vendors_aspnet_Users" FromRole="Vendors" ToRole="aspnet_Users" />
+          <NavigationProperty Name="Items" Relationship="ASPNETDBModel.FK_Items_Vendors" FromRole="Vendors" ToRole="Items" />
           <NavigationProperty Name="Menus" Relationship="ASPNETDBModel.FK_Menus_Vendors" FromRole="Vendors" ToRole="Menus" />
           <NavigationProperty Name="Orders" Relationship="ASPNETDBModel.FK_Orders_Vendors" FromRole="Vendors" ToRole="Orders" />
         </EntityType>
@@ -545,6 +595,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Items_Vendors">
+          <End Role="Vendors" Type="ASPNETDBModel.Vendor" Multiplicity="1" />
+          <End Role="Items" Type="ASPNETDBModel.Item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendors">
+              <PropertyRef Name="VendorId" />
+            </Principal>
+            <Dependent Role="Items">
+              <PropertyRef Name="VendorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Items_Items">
+          <End Role="Items" Type="ASPNETDBModel.Item" Multiplicity="1" />
+          <End Role="Order_Items" Type="ASPNETDBModel.Order_Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="ItemId" />
+            </Principal>
+            <Dependent Role="Order_Items">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Menus_Vendors">
           <End Role="Vendors" Type="ASPNETDBModel.Vendor" Multiplicity="1" />
           <End Role="Menus" Type="ASPNETDBModel.Menu" Multiplicity="*" />
@@ -554,6 +628,18 @@
             </Principal>
             <Dependent Role="Menus">
               <PropertyRef Name="VendorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Items_Orders">
+          <End Role="Orders" Type="ASPNETDBModel.Order" Multiplicity="1" />
+          <End Role="Order_Items" Type="ASPNETDBModel.Order_Items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="Order_Items">
+              <PropertyRef Name="OrderId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -573,13 +659,39 @@
           <End Role="aspnet_Roles" Type="ASPNETDBModel.aspnet_Roles" Multiplicity="*" />
           <End Role="aspnet_Users" Type="ASPNETDBModel.aspnet_Users" Multiplicity="*" />
         </Association>
-        <Association Name="Menu_Items">
-          <End Role="Items" Type="ASPNETDBModel.Item" Multiplicity="*" />
-          <End Role="Menus" Type="ASPNETDBModel.Menu" Multiplicity="*" />
+        <EntityType Name="MenuItems">
+          <Key>
+            <PropertyRef Name="MenuId" />
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Type="Guid" Name="MenuId" Nullable="false" />
+          <Property Type="Guid" Name="ItemId" Nullable="false" />
+          <NavigationProperty Name="Item" Relationship="ASPNETDBModel.FK_MenuItems_Items" FromRole="MenuItem" ToRole="Item" />
+          <NavigationProperty Name="Menu" Relationship="ASPNETDBModel.FK_MenuItems_Menus" FromRole="MenuItem" ToRole="Menu" />
+        </EntityType>
+        <Association Name="FK_MenuItems_Items">
+          <End Type="ASPNETDBModel.Item" Role="Item" Multiplicity="1" />
+          <End Type="ASPNETDBModel.MenuItems" Role="MenuItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="ItemId" />
+            </Principal>
+            <Dependent Role="MenuItem">
+              <PropertyRef Name="ItemId" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
-        <Association Name="Order_Items">
-          <End Role="Items" Type="ASPNETDBModel.Item" Multiplicity="*" />
-          <End Role="Orders" Type="ASPNETDBModel.Order" Multiplicity="*" />
+        <Association Name="FK_MenuItems_Menus">
+          <End Type="ASPNETDBModel.Menu" Role="Menu" Multiplicity="1" />
+          <End Type="ASPNETDBModel.MenuItems" Role="MenuItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Menu">
+              <PropertyRef Name="MenuId" />
+            </Principal>
+            <Dependent Role="MenuItem">
+              <PropertyRef Name="MenuId" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -638,10 +750,17 @@
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="Description" ColumnName="Description" />
             <ScalarProperty Name="Price" ColumnName="Price" />
+            <ScalarProperty Name="VendorId" ColumnName="VendorId" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="Menus"><EntityTypeMapping TypeName="ASPNETDBModel.Menu"><MappingFragment StoreEntitySet="Menus">
             <ScalarProperty Name="MenuId" ColumnName="MenuId" />
             <ScalarProperty Name="VendorId" ColumnName="VendorId" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OrderItems"><EntityTypeMapping TypeName="ASPNETDBModel.Order_Items"><MappingFragment StoreEntitySet="Order_Items">
+            <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+            <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+            <ScalarProperty Name="Quantity" ColumnName="Quantity" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="Orders"><EntityTypeMapping TypeName="ASPNETDBModel.Order"><MappingFragment StoreEntitySet="Orders">
             <ScalarProperty Name="OrderId" ColumnName="OrderId" />
@@ -660,22 +779,14 @@
               <ScalarProperty Name="UserId" ColumnName="UserId" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="Menu_Items" TypeName="ASPNETDBModel.Menu_Items" StoreEntitySet="Menu_Items">
-            <EndProperty Name="Items">
-              <ScalarProperty Name="ItemId" ColumnName="ItemId" />
-            </EndProperty>
-            <EndProperty Name="Menus">
-              <ScalarProperty Name="MenuId" ColumnName="MenuId" />
-            </EndProperty>
-          </AssociationSetMapping>
-          <AssociationSetMapping Name="Order_Items" TypeName="ASPNETDBModel.Order_Items" StoreEntitySet="Order_Items">
-            <EndProperty Name="Items">
-              <ScalarProperty Name="ItemId" ColumnName="ItemId" />
-            </EndProperty>
-            <EndProperty Name="Orders">
-              <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-            </EndProperty>
-          </AssociationSetMapping>
+          <EntitySetMapping Name="MenuItems">
+            <EntityTypeMapping TypeName="ASPNETDBModel.MenuItems">
+              <MappingFragment StoreEntitySet="MenuItems">
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -699,61 +810,71 @@
       <Diagram Name="FeedMeDB">
         <EntityTypeShape EntityType="ASPNETDBModel.aspnet_Membership" Width="1.5" PointX="5.25" PointY="5.875" Height="5.2494108072916674" IsExpanded="true" />
         <EntityTypeShape EntityType="ASPNETDBModel.aspnet_Profile" Width="1.5" PointX="5.25" PointY="3" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ASPNETDBModel.aspnet_Roles" Width="1.5" PointX="0.75" PointY="7.375" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ASPNETDBModel.aspnet_Users" Width="1.5" PointX="3" PointY="6.75" Height="3.3263964843749996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ASPNETDBModel.Item" Width="1.5" PointX="5.25" PointY="17.75" Height="2.172587890624996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ASPNETDBModel.Menu" Width="1.5" PointX="7.5" PointY="14.875" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="ASPNETDBModel.Order" Width="1.5" PointX="7.5" PointY="10.75" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="ASPNETDBModel.Vendor" Width="1.5" PointX="5.25" PointY="14.875" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPNETDBModel.aspnet_Roles" Width="1.5" PointX="0.75" PointY="7.625" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPNETDBModel.aspnet_Users" Width="1.5" PointX="3" PointY="7.125" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPNETDBModel.Item" Width="1.5" PointX="7.5" PointY="14.875" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPNETDBModel.Menu" Width="1.5" PointX="10.875" PointY="15.5" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPNETDBModel.Order_Items" Width="1.5" PointX="9.75" PointY="12.25" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPNETDBModel.Order" Width="1.5" PointX="7.5" PointY="11.125" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASPNETDBModel.Vendor" Width="1.5" PointX="5.25" PointY="15" Height="2.1725878906250014" IsExpanded="true" />
         <AssociationConnector Association="ASPNETDBModel.FK__aspnet_Me__UserI__22AA2996" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="8.4131982421875" />
-          <ConnectorPoint PointX="5.25" PointY="8.4131982421875" />
+          <ConnectorPoint PointX="4.5" PointY="8.7881982421875" />
+          <ConnectorPoint PointX="5.25" PointY="8.7881982421875" />
         </AssociationConnector>
         <AssociationConnector Association="ASPNETDBModel.FK__aspnet_Pr__UserI__38996AB5" ManuallyRouted="false">
-          <ConnectorPoint PointX="3.75" PointY="6.75" />
+          <ConnectorPoint PointX="3.75" PointY="7.125" />
           <ConnectorPoint PointX="3.75" PointY="4.0862939453125" />
           <ConnectorPoint PointX="5.25" PointY="4.0862939453125" />
         </AssociationConnector>
         <AssociationConnector Association="ASPNETDBModel.FK_Orders_aspnet_Users" ManuallyRouted="false">
-          <ConnectorPoint PointX="3.75" PointY="10.076396484375" />
-          <ConnectorPoint PointX="3.75" PointY="12.054749348958334" />
-          <ConnectorPoint PointX="4.0729191666666669" PointY="12.054749348958334" />
-          <ConnectorPoint PointX="4.2395858333333329" PointY="12.054749348958334" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="12.054749348958334" />
-          <ConnectorPoint PointX="7.208333333333333" PointY="12.054749348958334" />
-          <ConnectorPoint PointX="7.5" PointY="12.054749348958334" />
+          <ConnectorPoint PointX="3.75" PointY="10.451396484375" />
+          <ConnectorPoint PointX="3.75" PointY="12.2112939453125" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="12.2112939453125" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="12.2112939453125" />
+          <ConnectorPoint PointX="7.5" PointY="12.2112939453125" />
         </AssociationConnector>
         <AssociationConnector Association="ASPNETDBModel.FK_Vendors_aspnet_Users" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.1562525" PointY="10.076396484375" />
-          <ConnectorPoint PointX="4.1562525" PointY="15.865143229166666" />
-          <ConnectorPoint PointX="5.25" PointY="15.865143229166666" />
+          <ConnectorPoint PointX="4.1562525" PointY="10.451396484375" />
+          <ConnectorPoint PointX="4.1562525" PointY="16.0862939453125" />
+          <ConnectorPoint PointX="5.25" PointY="16.0862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ASPNETDBModel.FK_Items_Vendors" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="16.0550414453125" />
+          <ConnectorPoint PointX="7.5" PointY="16.0550414453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ASPNETDBModel.FK_Order_Items_Items" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="15.15625" />
+          <ConnectorPoint PointX="10.534375" PointY="15.15625" />
+          <ConnectorPoint PointX="10.534375" PointY="14.230286458333332" />
         </AssociationConnector>
         <AssociationConnector Association="ASPNETDBModel.FK_Menus_Vendors" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="15.768992513020834" />
-          <ConnectorPoint PointX="7.229166666666667" PointY="15.768992513020834" />
-          <ConnectorPoint PointX="7.395833333333333" PointY="15.768992513020834" />
-          <ConnectorPoint PointX="7.5" PointY="15.768992513020834" />
+          <ConnectorPoint PointX="6.7499999999999982" PointY="17.172587890625003" />
+          <ConnectorPoint PointX="7.125" PointY="17.547587890625003" />
+          <ConnectorPoint PointX="7.125" PointY="18.047587890625003" />
+          <ConnectorPoint PointX="10.5" PointY="18.047587890625003" />
+          <ConnectorPoint PointX="10.875" PointY="17.672587890625003" />
+        </AssociationConnector>
+        <AssociationConnector Association="ASPNETDBModel.FK_Order_Items_Orders" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="12.7737939453125" />
+          <ConnectorPoint PointX="9.75" PointY="12.7737939453125" />
         </AssociationConnector>
         <AssociationConnector Association="ASPNETDBModel.FK_Orders_Vendors" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="14.876152846153847" />
-          <ConnectorPoint PointX="7.125" PointY="14.501152846153847" />
-          <ConnectorPoint PointX="7.125" PointY="11.371122674479166" />
-          <ConnectorPoint PointX="7.5" PointY="11.371122674479166" />
+          <ConnectorPoint PointX="6" PointY="15" />
+          <ConnectorPoint PointX="6" PointY="12.785693417968751" />
+          <ConnectorPoint PointX="7.5" PointY="12.785693417968751" />
         </AssociationConnector>
         <AssociationConnector Association="ASPNETDBModel.aspnet_UsersInRoles" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="8.4612939453125" />
-          <ConnectorPoint PointX="3" PointY="8.4612939453125" />
+          <ConnectorPoint PointX="2.25" PointY="8.7112939453125" />
+          <ConnectorPoint PointX="3" PointY="8.7112939453125" />
         </AssociationConnector>
-        <AssociationConnector Association="ASPNETDBModel.Menu_Items" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="18.836293945312498" />
-          <ConnectorPoint PointX="8.25" PointY="18.836293945312498" />
-          <ConnectorPoint PointX="8.25" PointY="16.662985026041667" />
+        <EntityTypeShape EntityType="ASPNETDBModel.MenuItems" Width="1.5" PointX="13.125" PointY="15.25" Height="1.7879850260416674" />
+        <AssociationConnector Association="ASPNETDBModel.FK_MenuItems_Items" >
+          <ConnectorPoint PointX="9" PointY="15.343750000000002" />
+          <ConnectorPoint PointX="13.125" PointY="15.343750000000002" />
         </AssociationConnector>
-        <AssociationConnector Association="ASPNETDBModel.Order_Items" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="17.813460538461534" />
-          <ConnectorPoint PointX="7.3125" PointY="17.250960538461534" />
-          <ConnectorPoint PointX="7.3125" PointY="12.519920619791668" />
-          <ConnectorPoint PointX="7.5" PointY="12.519920619791668" />
+        <AssociationConnector Association="ASPNETDBModel.FK_MenuItems_Menus" >
+          <ConnectorPoint PointX="12.375" PointY="16.268992513020834" />
+          <ConnectorPoint PointX="13.125" PointY="16.268992513020834" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

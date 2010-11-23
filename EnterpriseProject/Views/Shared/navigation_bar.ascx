@@ -35,7 +35,7 @@
                 <td>
                     <ul id="filtering-nav" class="nav" style="margin-top: 0px; margin-bottom: 0px;">
                        <li>
-                        <%= Html.ActionLink("Menus", "Index", "Home", null, new { Class="blue_button", style="width:100px;" })%>
+                        <%= Html.ActionLink("Menus", "Index", "Menus", null, new { id="menus_section", Class="blue_button", style="width:100px;" })%>
                        </li>
                     </ul>
                 </td>

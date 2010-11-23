@@ -19,6 +19,11 @@ namespace EnterpriseProject.Models
             return entities.Vendors.FirstOrDefault(i => i.VendorId == guid);
         }
 
+        public Vendor GetVendorByUserId(System.Guid guid)
+        {
+            return entities.Vendors.FirstOrDefault(i => i.UserId == guid);
+        }
+
         public void add(Vendor vendor)
         {
             entities.Vendors.AddObject(vendor);

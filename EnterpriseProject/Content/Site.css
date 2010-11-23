@@ -137,6 +137,17 @@ page width. Or, you can specify an exact pixel width. */
     background-repeat:repeat-x;*/
 }
 
+#order
+{
+    height:40px;
+    -moz-border-radius: 15px;
+    background-color:#eee;
+    width: 250px;
+    margin-left: 725px;
+    padding:1em;
+    margin-bottom:2em;
+}
+
 #header h1
 {
     font-weight: bold;

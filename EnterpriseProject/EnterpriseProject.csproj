@@ -36,15 +36,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MvcContrib">
-      <HintPath>MVCContrib.release\MvcContrib.dll</HintPath>
-    </Reference>
-    <Reference Include="MvcContrib.FluentHtml">
-      <HintPath>MVCContrib.release\MvcContrib.FluentHtml.dll</HintPath>
-    </Reference>
-    <Reference Include="MvcContrib.TestHelper">
-      <HintPath>MVCContrib.release\MvcContrib.TestHelper.dll</HintPath>
-    </Reference>
     <Reference Include="MvcMembership">
       <HintPath>..\..\MembershipStarterKit\MvcMembership\bin\Debug\MvcMembership.dll</HintPath>
     </Reference>
@@ -92,6 +83,8 @@
     <Compile Include="Areas\UserAdministration\UserAdministrationAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\MenusController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -103,6 +96,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FeedMeDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ItemsRepository.cs" />
+    <Compile Include="Models\MenuItemsRepository.cs" />
+    <Compile Include="Models\MenusRepository.cs" />
     <Compile Include="Models\ProfileCommon.cs" />
     <Compile Include="Models\VendorsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,6 +152,15 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.6.custom.min.js" />
+    <Content Include="Views\Items\Create.aspx" />
+    <Content Include="Views\Items\Details.aspx" />
+    <Content Include="Views\Items\Index.aspx" />
+    <Content Include="Views\Items\ListMenus.ascx" />
+    <Content Include="Views\Menus\Create.aspx" />
+    <Content Include="Views\Menus\Delete.aspx" />
+    <Content Include="Views\Menus\Details.aspx" />
+    <Content Include="Views\Menus\Edit.aspx" />
+    <Content Include="Views\Menus\Index.aspx" />
     <Content Include="Views\Profile\Create.aspx" />
     <Content Include="Views\Profile\Edit.aspx" />
     <Content Include="Views\Profile\Index.aspx" />
@@ -192,6 +197,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\UserAdministration\Views\Web.config" />
     <EntityDeploy Include="Models\FeedMeDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FeedMeDB.Designer.cs</LastGenOutput>
@@ -201,9 +207,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Views\Profile\Profile.Master" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Areas\UserAdministration\Views\Web.config" />
+    <Content Include="Views\Menus\Menus.Master" />
+    <Content Include="Views\Items\Items.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

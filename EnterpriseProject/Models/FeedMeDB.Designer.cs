@@ -22,11 +22,14 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK__aspnet_Pr__UserI__38996AB5", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.aspnet_Users), "aspnet_Profile", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(EnterpriseProject.Models.aspnet_Profile), true)]
 [assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_Orders_aspnet_Users", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.aspnet_Users), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Order), true)]
 [assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_Vendors_aspnet_Users", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.aspnet_Users), "Vendors", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Vendor), true)]
+[assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_Items_Vendors", "Vendors", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.Vendor), "Items", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Item), true)]
+[assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_Order_Items_Items", "Items", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.Item), "Order_Items", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Order_Items), true)]
 [assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_Menus_Vendors", "Vendors", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.Vendor), "Menus", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Menu), true)]
+[assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_Order_Items_Orders", "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.Order), "Order_Items", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Order_Items), true)]
 [assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_Orders_Vendors", "Vendors", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.Vendor), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Order), true)]
 [assembly: EdmRelationshipAttribute("ASPNETDBModel", "aspnet_UsersInRoles", "aspnet_Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.aspnet_Roles), "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.aspnet_Users))]
-[assembly: EdmRelationshipAttribute("ASPNETDBModel", "Menu_Items", "Items", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Item), "Menus", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Menu))]
-[assembly: EdmRelationshipAttribute("ASPNETDBModel", "Order_Items", "Items", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Item), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Order))]
+[assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_MenuItems_Items", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.Item), "MenuItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.MenuItems), true)]
+[assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_MenuItems_Menus", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.Menu), "MenuItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.MenuItems), true)]
 
 #endregion
 
@@ -177,6 +180,22 @@ namespace EnterpriseProject.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<Order_Items> OrderItems
+        {
+            get
+            {
+                if ((_OrderItems == null))
+                {
+                    _OrderItems = base.CreateObjectSet<Order_Items>("OrderItems");
+                }
+                return _OrderItems;
+            }
+        }
+        private ObjectSet<Order_Items> _OrderItems;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<Order> Orders
         {
             get
@@ -205,6 +224,22 @@ namespace EnterpriseProject.Models
             }
         }
         private ObjectSet<Vendor> _Vendors;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<MenuItems> MenuItems
+        {
+            get
+            {
+                if ((_MenuItems == null))
+                {
+                    _MenuItems = base.CreateObjectSet<MenuItems>("MenuItems");
+                }
+                return _MenuItems;
+            }
+        }
+        private ObjectSet<MenuItems> _MenuItems;
 
         #endregion
         #region AddTo Methods
@@ -258,6 +293,14 @@ namespace EnterpriseProject.Models
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the OrderItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToOrderItems(Order_Items order_Items)
+        {
+            base.AddObject("OrderItems", order_Items);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the Orders EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToOrders(Order order)
@@ -271,6 +314,14 @@ namespace EnterpriseProject.Models
         public void AddToVendors(Vendor vendor)
         {
             base.AddObject("Vendors", vendor);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the MenuItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToMenuItems(MenuItems menuItems)
+        {
+            base.AddObject("MenuItems", menuItems);
         }
 
         #endregion
@@ -1638,13 +1689,15 @@ namespace EnterpriseProject.Models
         /// <param name="name">Initial value of the Name property.</param>
         /// <param name="description">Initial value of the Description property.</param>
         /// <param name="price">Initial value of the Price property.</param>
-        public static Item CreateItem(global::System.Guid itemId, global::System.String name, global::System.String description, global::System.Decimal price)
+        /// <param name="vendorId">Initial value of the VendorId property.</param>
+        public static Item CreateItem(global::System.Guid itemId, global::System.String name, global::System.String description, global::System.Decimal price, global::System.Guid vendorId)
         {
             Item item = new Item();
             item.ItemId = itemId;
             item.Name = name;
             item.Description = description;
             item.Price = price;
+            item.VendorId = vendorId;
             return item;
         }
 
@@ -1749,6 +1802,30 @@ namespace EnterpriseProject.Models
         private global::System.Decimal _Price;
         partial void OnPriceChanging(global::System.Decimal value);
         partial void OnPriceChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid VendorId
+        {
+            get
+            {
+                return _VendorId;
+            }
+            set
+            {
+                OnVendorIdChanging(value);
+                ReportPropertyChanging("VendorId");
+                _VendorId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("VendorId");
+                OnVendorIdChanged();
+            }
+        }
+        private global::System.Guid _VendorId;
+        partial void OnVendorIdChanging(global::System.Guid value);
+        partial void OnVendorIdChanged();
 
         #endregion
     
@@ -1760,18 +1837,34 @@ namespace EnterpriseProject.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "Menu_Items", "Menus")]
-        public EntityCollection<Menu> Menus
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_Items_Vendors", "Vendors")]
+        public Vendor Vendor
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Menu>("ASPNETDBModel.Menu_Items", "Menus");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vendor>("ASPNETDBModel.FK_Items_Vendors", "Vendors").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vendor>("ASPNETDBModel.FK_Items_Vendors", "Vendors").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Vendor> VendorReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vendor>("ASPNETDBModel.FK_Items_Vendors", "Vendors");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Menu>("ASPNETDBModel.Menu_Items", "Menus", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Vendor>("ASPNETDBModel.FK_Items_Vendors", "Vendors", value);
                 }
             }
         }
@@ -1782,18 +1875,40 @@ namespace EnterpriseProject.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "Order_Items", "Orders")]
-        public EntityCollection<Order> Orders
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_Order_Items_Items", "Order_Items")]
+        public EntityCollection<Order_Items> Order_Items
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("ASPNETDBModel.Order_Items", "Orders");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order_Items>("ASPNETDBModel.FK_Order_Items_Items", "Order_Items");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("ASPNETDBModel.Order_Items", "Orders", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order_Items>("ASPNETDBModel.FK_Order_Items_Items", "Order_Items", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_MenuItems_Items", "MenuItem")]
+        public EntityCollection<MenuItems> MenuItems
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MenuItems>("ASPNETDBModel.FK_MenuItems_Items", "MenuItem");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MenuItems>("ASPNETDBModel.FK_MenuItems_Items", "MenuItem", value);
                 }
             }
         }
@@ -1877,6 +1992,30 @@ namespace EnterpriseProject.Models
         private global::System.Guid _VendorId;
         partial void OnVendorIdChanging(global::System.Guid value);
         partial void OnVendorIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Description
+        {
+            get
+            {
+                return _Description;
+            }
+            set
+            {
+                OnDescriptionChanging(value);
+                ReportPropertyChanging("Description");
+                _Description = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Description");
+                OnDescriptionChanged();
+            }
+        }
+        private global::System.String _Description;
+        partial void OnDescriptionChanging(global::System.String value);
+        partial void OnDescriptionChanged();
 
         #endregion
     
@@ -1926,18 +2065,181 @@ namespace EnterpriseProject.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "Menu_Items", "Items")]
-        public EntityCollection<Item> Items
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_MenuItems_Menus", "MenuItem")]
+        public EntityCollection<MenuItems> MenuItems
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Item>("ASPNETDBModel.Menu_Items", "Items");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MenuItems>("ASPNETDBModel.FK_MenuItems_Menus", "MenuItem");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Item>("ASPNETDBModel.Menu_Items", "Items", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MenuItems>("ASPNETDBModel.FK_MenuItems_Menus", "MenuItem", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="ASPNETDBModel", Name="MenuItems")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MenuItems : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MenuItems object.
+        /// </summary>
+        /// <param name="menuId">Initial value of the MenuId property.</param>
+        /// <param name="itemId">Initial value of the ItemId property.</param>
+        public static MenuItems CreateMenuItems(global::System.Guid menuId, global::System.Guid itemId)
+        {
+            MenuItems menuItems = new MenuItems();
+            menuItems.MenuId = menuId;
+            menuItems.ItemId = itemId;
+            return menuItems;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid MenuId
+        {
+            get
+            {
+                return _MenuId;
+            }
+            set
+            {
+                if (_MenuId != value)
+                {
+                    OnMenuIdChanging(value);
+                    ReportPropertyChanging("MenuId");
+                    _MenuId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("MenuId");
+                    OnMenuIdChanged();
+                }
+            }
+        }
+        private global::System.Guid _MenuId;
+        partial void OnMenuIdChanging(global::System.Guid value);
+        partial void OnMenuIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid ItemId
+        {
+            get
+            {
+                return _ItemId;
+            }
+            set
+            {
+                if (_ItemId != value)
+                {
+                    OnItemIdChanging(value);
+                    ReportPropertyChanging("ItemId");
+                    _ItemId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ItemId");
+                    OnItemIdChanged();
+                }
+            }
+        }
+        private global::System.Guid _ItemId;
+        partial void OnItemIdChanging(global::System.Guid value);
+        partial void OnItemIdChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_MenuItems_Items", "Item")]
+        public Item Item
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("ASPNETDBModel.FK_MenuItems_Items", "Item").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("ASPNETDBModel.FK_MenuItems_Items", "Item").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Item> ItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("ASPNETDBModel.FK_MenuItems_Items", "Item");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Item>("ASPNETDBModel.FK_MenuItems_Items", "Item", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_MenuItems_Menus", "Menu")]
+        public Menu Menu
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Menu>("ASPNETDBModel.FK_MenuItems_Menus", "Menu").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Menu>("ASPNETDBModel.FK_MenuItems_Menus", "Menu").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Menu> MenuReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Menu>("ASPNETDBModel.FK_MenuItems_Menus", "Menu");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Menu>("ASPNETDBModel.FK_MenuItems_Menus", "Menu", value);
                 }
             }
         }
@@ -2096,6 +2398,28 @@ namespace EnterpriseProject.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_Order_Items_Orders", "Order_Items")]
+        public EntityCollection<Order_Items> Order_Items
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order_Items>("ASPNETDBModel.FK_Order_Items_Orders", "Order_Items");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order_Items>("ASPNETDBModel.FK_Order_Items_Orders", "Order_Items", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_Orders_Vendors", "Vendors")]
         public Vendor Vendor
         {
@@ -2127,6 +2451,122 @@ namespace EnterpriseProject.Models
                 }
             }
         }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="ASPNETDBModel", Name="Order_Items")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Order_Items : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Order_Items object.
+        /// </summary>
+        /// <param name="orderId">Initial value of the OrderId property.</param>
+        /// <param name="itemId">Initial value of the ItemId property.</param>
+        /// <param name="quantity">Initial value of the Quantity property.</param>
+        public static Order_Items CreateOrder_Items(global::System.Guid orderId, global::System.Guid itemId, global::System.Int32 quantity)
+        {
+            Order_Items order_Items = new Order_Items();
+            order_Items.OrderId = orderId;
+            order_Items.ItemId = itemId;
+            order_Items.Quantity = quantity;
+            return order_Items;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid OrderId
+        {
+            get
+            {
+                return _OrderId;
+            }
+            set
+            {
+                if (_OrderId != value)
+                {
+                    OnOrderIdChanging(value);
+                    ReportPropertyChanging("OrderId");
+                    _OrderId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("OrderId");
+                    OnOrderIdChanged();
+                }
+            }
+        }
+        private global::System.Guid _OrderId;
+        partial void OnOrderIdChanging(global::System.Guid value);
+        partial void OnOrderIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid ItemId
+        {
+            get
+            {
+                return _ItemId;
+            }
+            set
+            {
+                if (_ItemId != value)
+                {
+                    OnItemIdChanging(value);
+                    ReportPropertyChanging("ItemId");
+                    _ItemId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ItemId");
+                    OnItemIdChanged();
+                }
+            }
+        }
+        private global::System.Guid _ItemId;
+        partial void OnItemIdChanging(global::System.Guid value);
+        partial void OnItemIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Quantity
+        {
+            get
+            {
+                return _Quantity;
+            }
+            set
+            {
+                if (_Quantity != value)
+                {
+                    OnQuantityChanging(value);
+                    ReportPropertyChanging("Quantity");
+                    _Quantity = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Quantity");
+                    OnQuantityChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Quantity;
+        partial void OnQuantityChanging(global::System.Int32 value);
+        partial void OnQuantityChanged();
+
+        #endregion
+    
+        #region Navigation Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2134,18 +2574,72 @@ namespace EnterpriseProject.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "Order_Items", "Items")]
-        public EntityCollection<Item> Items
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_Order_Items_Items", "Items")]
+        public Item Item
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Item>("ASPNETDBModel.Order_Items", "Items");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("ASPNETDBModel.FK_Order_Items_Items", "Items").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("ASPNETDBModel.FK_Order_Items_Items", "Items").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Item> ItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("ASPNETDBModel.FK_Order_Items_Items", "Items");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Item>("ASPNETDBModel.Order_Items", "Items", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Item>("ASPNETDBModel.FK_Order_Items_Items", "Items", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_Order_Items_Orders", "Orders")]
+        public Order Order
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("ASPNETDBModel.FK_Order_Items_Orders", "Orders").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("ASPNETDBModel.FK_Order_Items_Orders", "Orders").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Order> OrderReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("ASPNETDBModel.FK_Order_Items_Orders", "Orders");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Order>("ASPNETDBModel.FK_Order_Items_Orders", "Orders", value);
                 }
             }
         }
@@ -2268,6 +2762,28 @@ namespace EnterpriseProject.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Users>("ASPNETDBModel.FK_Vendors_aspnet_Users", "aspnet_Users", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_Items_Vendors", "Items")]
+        public EntityCollection<Item> Items
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Item>("ASPNETDBModel.FK_Items_Vendors", "Items");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Item>("ASPNETDBModel.FK_Items_Vendors", "Items", value);
                 }
             }
         }

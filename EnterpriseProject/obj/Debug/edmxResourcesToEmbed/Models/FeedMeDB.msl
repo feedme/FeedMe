@@ -70,6 +70,7 @@
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="VendorId" ColumnName="VendorId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -78,6 +79,16 @@
         <MappingFragment StoreEntitySet="Menus">
           <ScalarProperty Name="MenuId" ColumnName="MenuId" />
           <ScalarProperty Name="VendorId" ColumnName="VendorId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItems">
+      <EntityTypeMapping TypeName="ASPNETDBModel.Order_Items">
+        <MappingFragment StoreEntitySet="Order_Items">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -106,21 +117,13 @@
         <ScalarProperty Name="UserId" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="Menu_Items" TypeName="ASPNETDBModel.Menu_Items" StoreEntitySet="Menu_Items">
-      <EndProperty Name="Items">
-        <ScalarProperty Name="ItemId" ColumnName="ItemId" />
-      </EndProperty>
-      <EndProperty Name="Menus">
-        <ScalarProperty Name="MenuId" ColumnName="MenuId" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="Order_Items" TypeName="ASPNETDBModel.Order_Items" StoreEntitySet="Order_Items">
-      <EndProperty Name="Items">
-        <ScalarProperty Name="ItemId" ColumnName="ItemId" />
-      </EndProperty>
-      <EndProperty Name="Orders">
-        <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-      </EndProperty>
-    </AssociationSetMapping>
+    <EntitySetMapping Name="MenuItems">
+      <EntityTypeMapping TypeName="ASPNETDBModel.MenuItems">
+        <MappingFragment StoreEntitySet="MenuItems">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

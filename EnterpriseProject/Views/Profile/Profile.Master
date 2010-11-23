@@ -1,15 +1,14 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-<%@ Import Namespace="MvcContrib.UI.Html" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
-    <%= Html.Stylesheet("~/Content/Site.css") %>   
-    <%= Html.Stylesheet("~/Content/jquery-ui-1.8.6.custom.css") %>
-    <%= Html.Stylesheet("~/Content/MvcMembership.css") %>
+<link type="text/css" rel="stylesheet" href="/Content/Site.css" />
+<link type="text/css" rel="stylesheet" href="/Content/jquery-ui-1.8.6.custom.css" />
+<link type="text/css" rel="stylesheet" href="/Content/MvcMembership.css" />
+<script type="text/javascript" src="/Scripts/jquery-1.4.2.min.js" ></script>
+<script type="text/javascript" src="/Scripts/jquery-ui-1.8.6.custom.min.js" ></script>
 
-    <%= Html.ScriptInclude("~/Scripts/jquery-1.4.2.min.js") %>
-    <%= Html.ScriptInclude("~/Scripts/jquery-ui-1.8.6.custom.min.js") %>
 
     <script type="text/javascript">
         $(function () {
