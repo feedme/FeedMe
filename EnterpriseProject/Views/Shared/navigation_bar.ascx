@@ -12,7 +12,7 @@
                 <td>
                     <ul id="filtering-nav" class="nav" style="margin-top: 0px; margin-bottom: 0px;">
                        <li>
-                         <%= Html.ActionLink("Friends", "Index", "Home", null, new { Class="blue_button", style="width:100px;" })%>
+                         <%= Html.ActionLink("Friends", "Index", "Friends", null, new { Class="blue_button", style="width:100px;" })%>
                        </li>
                     </ul>
                 </td>
