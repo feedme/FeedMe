@@ -82,6 +82,7 @@
     <Compile Include="Areas\UserAdministration\Models\UserAdministration\RoleViewModel.cs" />
     <Compile Include="Areas\UserAdministration\UserAdministrationAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FriendsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\MenusController.cs" />
@@ -152,6 +153,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.6.custom.min.js" />
+    <Content Include="Views\Friends\Index.aspx" />
     <Content Include="Views\Items\Create.aspx" />
     <Content Include="Views\Items\Details.aspx" />
     <Content Include="Views\Items\Index.aspx" />

@@ -10,9 +10,6 @@ C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\Enterp
 C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\obj\Debug\EnterpriseProject.pdb
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.dll
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.pdb
-C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\MvcMembership.pdb
-C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\PagedList.pdb
-C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\PagedList.xml
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\obj\Debug\EnterpriseProject.dll
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\obj\Debug\EnterpriseProject.pdb

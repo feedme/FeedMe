@@ -18,9 +18,6 @@ C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\bin\Debug\Enterprise
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\bin\Debug\PagedList.dll
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\bin\Debug\MvcMembership.dll
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\bin\Debug\EnterpriseProject.pdb
-C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\bin\Debug\PagedList.pdb
-C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\bin\Debug\PagedList.xml
-C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\bin\Debug\MvcMembership.pdb
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.dll
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.pdb

@@ -478,3 +478,26 @@ div#title
        -moz-box-shadow: 0 1px 2px hsla(0,0%,0%,.3);
             box-shadow: 0 1px 2px hsla(0,0%,0%,.3);
 }
+
+#friendlist 
+{
+    -moz-border-radius: 0.2em;
+    -webkit-border-radius: 0.2em;
+    border: 1px solid #999;
+    width: 60%;
+    height: 80px;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 10px;
+    padding:5px; 
+}
+
+#profile_photo 
+{
+    width: 75px;
+    height: 75px;
+    -moz-border-radius: 0.2em;
+    -webkit-border-radius: 0.2em;
+    border: 1px solid #999;
+    float:left;
+}

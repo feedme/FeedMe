@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Security;
+using System.Web.Profile;
+using System.Web.Security;
+using EnterpriseProject.Models;
 
 namespace EnterpriseProject.Controllers
 {
@@ -13,7 +17,8 @@ namespace EnterpriseProject.Controllers
         // Retrieve a list of all users friends
         public ActionResult Index()
         {
-            return View();
+            MembershipUserCollection allUsers = Membership.GetAllUsers();
+            return View(allUsers);
         }
 
         // List all users that are not friends
