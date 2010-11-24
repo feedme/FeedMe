@@ -10,17 +10,11 @@
             $("#menus_link").addClass("selected");
         });
 	</script>
-    <h2>Index</h2>
+    <h1><%=ViewData["vendorname"] %> Menus</h1>
 
     <table>
         <tr>
             <th></th>
-            <th>
-                MenuId
-            </th>
-            <th>
-                VendorId
-            </th>
             <th>
                 Description
             </th>
@@ -32,13 +26,8 @@
             <td>
                 <%: Html.ActionLink("Edit", "Edit", new { id=item.MenuId }) %> |
                 <%: Html.ActionLink("Details", "Details", new { id=item.MenuId })%> |
-                <%: Html.ActionLink("Delete", "Delete", new { id=item.MenuId })%>
-            </td>
-            <td>
-                <%: item.MenuId %>
-            </td>
-            <td>
-                <%: item.VendorId %>
+                <%: Html.ActionLink("Delete", "Delete", new { id=item.MenuId })%> |
+                <%: Html.ActionLink("Add Items", "AddItems", new { id=item.MenuId })%>
             </td>
             <td>
                 <%: item.Description %>

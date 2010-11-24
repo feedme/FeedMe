@@ -74,6 +74,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="MenuItems">
+      <EntityTypeMapping TypeName="ASPNETDBModel.MenuItem">
+        <MappingFragment StoreEntitySet="MenuItems">
+          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="MenuItemId" ColumnName="MenuItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Menus">
       <EntityTypeMapping TypeName="ASPNETDBModel.Menu">
         <MappingFragment StoreEntitySet="Menus">
@@ -84,8 +93,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OrderItems">
-      <EntityTypeMapping TypeName="ASPNETDBModel.Order_Items">
-        <MappingFragment StoreEntitySet="Order_Items">
+      <EntityTypeMapping TypeName="ASPNETDBModel.OrderItem">
+        <MappingFragment StoreEntitySet="OrderItems">
           <ScalarProperty Name="OrderId" ColumnName="OrderId" />
           <ScalarProperty Name="ItemId" ColumnName="ItemId" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
@@ -117,13 +126,5 @@
         <ScalarProperty Name="UserId" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
-    <EntitySetMapping Name="MenuItems">
-      <EntityTypeMapping TypeName="ASPNETDBModel.MenuItems">
-        <MappingFragment StoreEntitySet="MenuItems">
-          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
-          <ScalarProperty Name="MenuId" ColumnName="MenuId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

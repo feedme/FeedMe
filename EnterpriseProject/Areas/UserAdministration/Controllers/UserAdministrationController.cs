@@ -71,16 +71,17 @@ namespace SampleWebsite.Areas.UserAdministration.Controllers
             vendor.VendorId = System.Guid.NewGuid();
             vendor.UserId = id;
 
-            if (vendorsRepository.GetVendorByUserId(id).Equals(null))
-            {
+            //if (vendorsRepository.GetVendorByUserId(id).Equals(null))
+            //{
                 if (TryUpdateModel(vendor))
                 {
                     vendorsRepository.add(vendor);
                     vendorsRepository.save();
+                    _rolesService.RemoveFromRole(_userService.Get(id), "Customer");
                     _rolesService.AddToRole(_userService.Get(id), "Vendor");
                     return RedirectToAction("index");
                 }
-            }
+            //}
 
             return RedirectToAction("Index");
         }

@@ -7,19 +7,14 @@
     <EntitySet Name="aspnet_Users" EntityType="ASPNETDBModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="aspnet_UsersInRoles" EntityType="ASPNETDBModel.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Items" EntityType="ASPNETDBModel.Store.Items" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="MenuItems" EntityType="ASPNETDBModel.Store.MenuItems" store:Type="Tables" store:Schema="dbo" store:Name="MenuItems">
-      <DefiningQuery>SELECT 
-      [MenuItems].[MenuId] AS [MenuId], 
-      [MenuItems].[ItemId] AS [ItemId]
-      FROM [dbo].[MenuItems] AS [MenuItems]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="MenuItems" EntityType="ASPNETDBModel.Store.MenuItems" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Menus" EntityType="ASPNETDBModel.Store.Menus" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Order_Items" EntityType="ASPNETDBModel.Store.Order_Items" store:Type="Tables" store:Schema="dbo" store:Name="Order_Items">
+    <EntitySet Name="OrderItems" EntityType="ASPNETDBModel.Store.OrderItems" store:Type="Tables" store:Schema="dbo" store:Name="OrderItems">
       <DefiningQuery>SELECT 
-      [Order_Items].[OrderId] AS [OrderId], 
-      [Order_Items].[ItemId] AS [ItemId], 
-      [Order_Items].[Quantity] AS [Quantity]
-      FROM [dbo].[Order_Items] AS [Order_Items]</DefiningQuery>
+      [OrderItems].[OrderId] AS [OrderId], 
+      [OrderItems].[ItemId] AS [ItemId], 
+      [OrderItems].[Quantity] AS [Quantity]
+      FROM [dbo].[OrderItems] AS [OrderItems]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Orders" EntityType="ASPNETDBModel.Store.Orders" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Vendors" EntityType="ASPNETDBModel.Store.Vendors" store:Type="Tables" Schema="dbo" />
@@ -55,13 +50,13 @@
       <End Role="Vendors" EntitySet="Vendors" />
       <End Role="Menus" EntitySet="Menus" />
     </AssociationSet>
-    <AssociationSet Name="FK_Order_Items_Items" Association="ASPNETDBModel.Store.FK_Order_Items_Items">
+    <AssociationSet Name="FK_OrderItems_Items" Association="ASPNETDBModel.Store.FK_OrderItems_Items">
       <End Role="Items" EntitySet="Items" />
-      <End Role="Order_Items" EntitySet="Order_Items" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
     </AssociationSet>
-    <AssociationSet Name="FK_Order_Items_Orders" Association="ASPNETDBModel.Store.FK_Order_Items_Orders">
+    <AssociationSet Name="FK_OrderItems_Orders" Association="ASPNETDBModel.Store.FK_OrderItems_Orders">
       <End Role="Orders" EntitySet="Orders" />
-      <End Role="Order_Items" EntitySet="Order_Items" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
     </AssociationSet>
     <AssociationSet Name="FK_Orders_aspnet_Users" Association="ASPNETDBModel.Store.FK_Orders_aspnet_Users">
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
@@ -152,16 +147,13 @@
     <Property Name="Price" Type="money" Nullable="false" />
     <Property Name="VendorId" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'C:\USERS\JONATHAN\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\ENTERPRISEPROJECT\ENTERPRISEPROJECT\APP_DATA\ASPNETDB.MDF.dbo.MenuItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
   <EntityType Name="MenuItems">
     <Key>
-      <PropertyRef Name="MenuId" />
-      <PropertyRef Name="ItemId" />
+      <PropertyRef Name="MenuItemId" />
     </Key>
     <Property Name="MenuId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ItemId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MenuItemId" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="Menus">
     <Key>
@@ -172,9 +164,9 @@
     <Property Name="Description" Type="varchar" MaxLength="300" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'C:\USERS\JONATHAN\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\ENTERPRISEPROJECT\ENTERPRISEPROJECT\APP_DATA\ASPNETDB.MDF.dbo.Order_Items' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'C:\USERS\JONATHAN\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\ENTERPRISEPROJECT\ENTERPRISEPROJECT\APP_DATA\ASPNETDB.MDF.dbo.OrderItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
-  <EntityType Name="Order_Items">
+  <EntityType Name="OrderItems">
     <Key>
       <PropertyRef Name="OrderId" />
       <PropertyRef Name="ItemId" />
@@ -295,26 +287,26 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Order_Items_Items">
+  <Association Name="FK_OrderItems_Items">
     <End Role="Items" Type="ASPNETDBModel.Store.Items" Multiplicity="1" />
-    <End Role="Order_Items" Type="ASPNETDBModel.Store.Order_Items" Multiplicity="*" />
+    <End Role="OrderItems" Type="ASPNETDBModel.Store.OrderItems" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Items">
         <PropertyRef Name="ItemId" />
       </Principal>
-      <Dependent Role="Order_Items">
+      <Dependent Role="OrderItems">
         <PropertyRef Name="ItemId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Order_Items_Orders">
+  <Association Name="FK_OrderItems_Orders">
     <End Role="Orders" Type="ASPNETDBModel.Store.Orders" Multiplicity="1" />
-    <End Role="Order_Items" Type="ASPNETDBModel.Store.Order_Items" Multiplicity="*" />
+    <End Role="OrderItems" Type="ASPNETDBModel.Store.OrderItems" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Orders">
         <PropertyRef Name="OrderId" />
       </Principal>
-      <Dependent Role="Order_Items">
+      <Dependent Role="OrderItems">
         <PropertyRef Name="OrderId" />
       </Dependent>
     </ReferentialConstraint>

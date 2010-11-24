@@ -9,31 +9,29 @@ namespace EnterpriseProject.Models
     {
         FeedMeEntities entities = new FeedMeEntities();
 
-        public IQueryable<MenuItems> FindAllItems()
+        public IQueryable<MenuItem> FindAllItems()
         {
             return entities.MenuItems;
         }
 
-        public Item GetMenuItem(System.Guid guid)
+        public MenuItem GetMenuItem(System.Guid guid)
         {
-            return entities.Items.FirstOrDefault(i => i.ItemId == guid);
+            return entities.MenuItems.FirstOrDefault(i => i.ItemId == guid);
         }
 
-        public IQueryable<Item> GetItemsByVendorId(System.Guid guid)
+        public IQueryable<MenuItem> FindAllMenuItems(System.Guid guid)
         {
-            return entities.Items.Where(i => i.VendorId == guid);
+            return entities.MenuItems.Where(i => i.MenuId == guid);
         }
 
-        public void add(Item item)
+        public void add(MenuItem item)
         {
-            entities.Items.AddObject(item);
+            entities.MenuItems.AddObject(item);
         }
 
-
-
-        public void delete(Item item)
+        public void delete(MenuItem item)
         {
-            entities.Items.DeleteObject(item);
+            entities.MenuItems.DeleteObject(item);
         }
 
         public void save()

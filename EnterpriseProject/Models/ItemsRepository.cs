@@ -31,7 +31,7 @@ namespace EnterpriseProject.Models
 
         public void addtomenu(System.Guid itemid, System.Guid menuid)
         {
-            MenuItems item = new MenuItems();
+            MenuItem item = new MenuItem();
             item.ItemId = itemid;
             item.MenuId = menuid;
             entities.MenuItems.AddObject(item);

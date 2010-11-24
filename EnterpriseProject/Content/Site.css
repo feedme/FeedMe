@@ -288,7 +288,7 @@ input[type="password"]
     font-weight:bold;
 }
 
-/* TABLE
+/* TABLE*/
 ----------------------------------------------------------
 
 table 
@@ -299,17 +299,28 @@ table
 
 table td 
 {
-  padding: 5px;   
+  padding: 10px;   
   border: solid 1px #e8eef4;
+}
+
+table tr:hover
+{
+    background-color: #def;
 }
 
 table th
 {
   padding: 6px 5px;
   text-align: left;
-  background-color: #e8eef4; 
+  background-color: #454545;
+  color: White; 
   border: solid 1px #e8eef4;   
-}*/
+}
+
+#buttons_table td
+{
+    padding:0;
+}
 
 /* MISC  
 ----------------------------------------------------------*/

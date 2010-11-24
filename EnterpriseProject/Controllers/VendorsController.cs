@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EnterpriseProject.Models;
+using System.Security;
+using System.Web.Profile;
+using System.Web.Security;
 
 namespace EnterpriseProject.Controllers
 {
@@ -12,11 +15,17 @@ namespace EnterpriseProject.Controllers
         //
         // GET: /Vendors/
         FeedMeEntities db = new FeedMeEntities();
-        
+        MenusRepository menusRepository = new MenusRepository();
+        VendorsRepository vendorsRepository = new VendorsRepository();
+        ItemsRepository itemsRepository = new ItemsRepository();
+        MenuItemsRepository menuitemsRepository = new MenuItemsRepository();
+
+        [Authorize(Roles = "Customer")]
         public ActionResult Index()
         {
-            
-            return View();
+            MembershipUser user = Membership.GetUser();
+            var vendors = vendorsRepository.FindAllVendors();
+            return View(vendors);
         }
 
         //

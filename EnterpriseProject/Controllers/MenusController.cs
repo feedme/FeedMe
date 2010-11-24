@@ -14,13 +14,17 @@ namespace EnterpriseProject.Controllers
     {
         MenusRepository menusRepository = new MenusRepository();
         VendorsRepository vendorsRepository = new VendorsRepository();
+        ItemsRepository itemsRepository = new ItemsRepository();
+        MenuItemsRepository menuitemsRepository = new MenuItemsRepository();
         //
         // GET: /Menus/
 
+        [Authorize(Roles = "Vendor")]
         public ActionResult Index()
         {
             MembershipUser user = Membership.GetUser();
             Vendor vendor = vendorsRepository.GetVendorByUserId((Guid)user.ProviderUserKey);
+            ViewData["vendorname"] = vendor.aspnet_Users.UserName;
             var menus = menusRepository.GetMenusByVendorId(vendor.VendorId);
             return View(menus);
         }
@@ -28,9 +32,11 @@ namespace EnterpriseProject.Controllers
         //
         // GET: /Menus/Details/5
 
-        public ActionResult Details(int id)
+        public ActionResult Details(Guid id)
         {
-            return View();
+            ViewData["menutitle"] = menusRepository.GetMenu(id).Description;
+            var menuitems = menuitemsRepository.FindAllMenuItems(id);
+            return View(menuitems);
         }
 
         //
@@ -91,6 +97,40 @@ namespace EnterpriseProject.Controllers
             return View(menu);
         }
 
+        [Authorize(Roles = "Vendor")]
+        public ActionResult AddItems(System.Guid id)
+        {
+            Menu menu = menusRepository.GetMenu(id);
+            ViewData["menuid"] = menu.MenuId;
+            ViewData["menutitle"] = menu.Description;
+            MembershipUser user = Membership.GetUser();
+            Vendor vendor = vendorsRepository.GetVendorByUserId((Guid)user.ProviderUserKey);
+            var items = itemsRepository.GetItemsByVendorId(vendor.VendorId);
+            return View(items);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Vendor")]
+        public ActionResult AddItems(System.Guid menuId, System.Guid itemId)
+        {
+            MenuItem menuitem = new MenuItem();
+            menuitem.MenuId = menuId;
+            menuitem.ItemId = itemId;
+            menuitem.MenuItemId = System.Guid.NewGuid();
+
+            //if (menuitemsRepository.GetMenuItem(itemId).Equals(null))
+            //{
+                if (TryUpdateModel(menuitem))
+                {
+                    menuitemsRepository.add(menuitem);
+                    menuitemsRepository.save();
+                    return RedirectToAction("index");
+                }
+            //}
+
+
+            return RedirectToAction("Index");
+        }
         //
         // GET: /Menus/Delete/5
 
@@ -114,6 +154,18 @@ namespace EnterpriseProject.Controllers
             {
                 menusRepository.delete(menu);
                 menusRepository.save();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult DeleteFromMenu(System.Guid menuid, System.Guid itemid)
+        {
+            MenuItem menuitem = menuitemsRepository.GetMenuItem(itemid);
+            if (menuitem != null)
+            {
+                menuitemsRepository.delete(menuitem);
+                menuitemsRepository.save();
             }
             return RedirectToAction("Index");
         }

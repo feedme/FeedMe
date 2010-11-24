@@ -97,7 +97,8 @@ namespace EnterpriseProject.Controllers
                 if (createStatus == MembershipCreateStatus.Success)
                 {
                     FormsService.SignIn(model.UserName, false /* createPersistentCookie */);
-                    
+
+                    Roles.AddUserToRole(model.UserName, "Customer");
                     
                     return RedirectToAction("Index", "Home");
                 }
