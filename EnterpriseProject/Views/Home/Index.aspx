@@ -1,7 +1,14 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+</script>
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Home Page
+    Home
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -13,7 +20,7 @@
 </script>
 <h1>Welcome To FeedMe</h1>
 
-<table width=100%>
+<table width="100%">
     <tr style="">
         <td valign="top">
         <h2>Welcome to FeedMe, an application that will settle that rumbling in your stomach!.</h2><h3>To get started 

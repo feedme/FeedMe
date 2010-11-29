@@ -42,15 +42,15 @@ namespace EnterpriseProject.Controllers
         // POST: /Profile/Create
 
         [AcceptVerbs("POST")]
-        public ActionResult Create(string firstname, string lastname, string bio, string phone, string street, string city, string county)
+        public ActionResult Create(string firstname, string lastname, string preferences, string phone, string address, string city, string county)
         {
             ProfileCommon profile = ProfileCommon.Create(user.UserName, user.IsApproved) as ProfileCommon;
 
             profile.FirstName = firstname;
             profile.LastName = lastname;
-            profile.Bio = bio;
+            profile.Preferences = preferences;
             profile.Phone = phone;
-            profile.Street = street;
+            profile.Address = address;
             profile.City = city;
             profile.County = county;
             profile.Save();
@@ -71,15 +71,15 @@ namespace EnterpriseProject.Controllers
         // POST: /Profile/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(string firstname, string lastname, string bio, string phone, string street, string city, string county)
+        public ActionResult Edit(string firstname, string lastname, string preferences, string phone, string address, string city, string county)
         {
             profile = profile.GetProfile(user.UserName);
 
             profile.FirstName = firstname;
             profile.LastName = lastname;
-            profile.Bio = bio;
+            profile.Preferences = preferences;
             profile.Phone = phone;
-            profile.Street = street;
+            profile.Address = address;
             profile.City = city;
             profile.County = county;
             profile.Save();

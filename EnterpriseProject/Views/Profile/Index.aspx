@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Profile/Profile.Master" Inherits="System.Web.Mvc.ViewPage<EnterpriseProject.Models.ProfileCommon>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+	Profile
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -14,10 +14,10 @@
     <h1>Your Profile(<%= Html.ActionLink("Edit", "Edit", "Profile")%>)</h1>
 
     <fieldset style="font-size:1.2em;">
-        <legend>Profile Fields</legend>
-        
-        <div align=center>
-        <table width="80%">
+        <legend>Your Profile</legend>
+       
+        <div align=right>
+        <table width="65%">
         <tr>
         <td class="textOutputBlue">FirstName</td>
         <td class="textOutputNoh"><%: Model.FirstName %></td>
@@ -27,16 +27,16 @@
         <td class="textOutputNoh"><%: Model.LastName %></td>       
         </tr>
         <tr>
-        <td class="textOutputBlue">Bio</td>
-        <td class="textOutputNoh"><%: Model.Bio %></td>
+        <td class="textOutputBlue">Preferences</td>
+        <td class="textOutputNoh"><%: Model.Preferences%></td>
         </tr>
         <tr>
         <td class="textOutputBlue">Phone</td>
         <td class="textOutputNoh"><%: Model.Phone %></td>
         </tr>
         <tr>
-        <td class="textOutputBlue">Street</td>
-        <td class="textOutputNoh"><%: Model.Street %></td>
+        <td class="textOutputBlue">Address</td>
+        <td class="textOutputNoh"><%: Model.Address %></td>
         </tr>
         <tr>
         <td class="textOutputBlue">City</td>
@@ -61,6 +61,7 @@
         </table>
         </div>
     </fieldset>
+    
 
 
 </asp:Content>
