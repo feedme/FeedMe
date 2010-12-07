@@ -2372,6 +2372,30 @@ namespace EnterpriseProject.Models
         private global::System.Guid _VendorId;
         partial void OnVendorIdChanging(global::System.Guid value);
         partial void OnVendorIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Status
+        {
+            get
+            {
+                return _Status;
+            }
+            set
+            {
+                OnStatusChanging(value);
+                ReportPropertyChanging("Status");
+                _Status = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Status");
+                OnStatusChanged();
+            }
+        }
+        private global::System.String _Status;
+        partial void OnStatusChanging(global::System.String value);
+        partial void OnStatusChanged();
 
         #endregion
     
@@ -2494,12 +2518,14 @@ namespace EnterpriseProject.Models
         /// <param name="orderId">Initial value of the OrderId property.</param>
         /// <param name="itemId">Initial value of the ItemId property.</param>
         /// <param name="quantity">Initial value of the Quantity property.</param>
-        public static OrderItem CreateOrderItem(global::System.Guid orderId, global::System.Guid itemId, global::System.Int32 quantity)
+        /// <param name="orderItemId">Initial value of the OrderItemId property.</param>
+        public static OrderItem CreateOrderItem(global::System.Guid orderId, global::System.Guid itemId, global::System.Int32 quantity, global::System.Guid orderItemId)
         {
             OrderItem orderItem = new OrderItem();
             orderItem.OrderId = orderId;
             orderItem.ItemId = itemId;
             orderItem.Quantity = quantity;
+            orderItem.OrderItemId = orderItemId;
             return orderItem;
         }
 
@@ -2509,7 +2535,7 @@ namespace EnterpriseProject.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Guid OrderId
         {
@@ -2519,14 +2545,11 @@ namespace EnterpriseProject.Models
             }
             set
             {
-                if (_OrderId != value)
-                {
-                    OnOrderIdChanging(value);
-                    ReportPropertyChanging("OrderId");
-                    _OrderId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("OrderId");
-                    OnOrderIdChanged();
-                }
+                OnOrderIdChanging(value);
+                ReportPropertyChanging("OrderId");
+                _OrderId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("OrderId");
+                OnOrderIdChanged();
             }
         }
         private global::System.Guid _OrderId;
@@ -2536,7 +2559,7 @@ namespace EnterpriseProject.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Guid ItemId
         {
@@ -2546,14 +2569,11 @@ namespace EnterpriseProject.Models
             }
             set
             {
-                if (_ItemId != value)
-                {
-                    OnItemIdChanging(value);
-                    ReportPropertyChanging("ItemId");
-                    _ItemId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ItemId");
-                    OnItemIdChanged();
-                }
+                OnItemIdChanging(value);
+                ReportPropertyChanging("ItemId");
+                _ItemId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ItemId");
+                OnItemIdChanged();
             }
         }
         private global::System.Guid _ItemId;
@@ -2563,7 +2583,7 @@ namespace EnterpriseProject.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 Quantity
         {
@@ -2573,19 +2593,43 @@ namespace EnterpriseProject.Models
             }
             set
             {
-                if (_Quantity != value)
-                {
-                    OnQuantityChanging(value);
-                    ReportPropertyChanging("Quantity");
-                    _Quantity = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Quantity");
-                    OnQuantityChanged();
-                }
+                OnQuantityChanging(value);
+                ReportPropertyChanging("Quantity");
+                _Quantity = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Quantity");
+                OnQuantityChanged();
             }
         }
         private global::System.Int32 _Quantity;
         partial void OnQuantityChanging(global::System.Int32 value);
         partial void OnQuantityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid OrderItemId
+        {
+            get
+            {
+                return _OrderItemId;
+            }
+            set
+            {
+                if (_OrderItemId != value)
+                {
+                    OnOrderItemIdChanging(value);
+                    ReportPropertyChanging("OrderItemId");
+                    _OrderItemId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("OrderItemId");
+                    OnOrderItemIdChanged();
+                }
+            }
+        }
+        private global::System.Guid _OrderItemId;
+        partial void OnOrderItemIdChanging(global::System.Guid value);
+        partial void OnOrderItemIdChanged();
 
         #endregion
     

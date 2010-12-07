@@ -19,6 +19,13 @@ namespace EnterpriseProject.Models
             return entities.Items.FirstOrDefault(i => i.ItemId == guid);
         }
 
+        public Vendor GetVendorByItemId(System.Guid guid)
+        {
+            Item item = entities.Items.FirstOrDefault(i => i.ItemId == guid);
+            return entities.Vendors.FirstOrDefault(i => i.VendorId == item.VendorId);
+        }
+
+
         public IQueryable<Item> GetItemsByVendorId(System.Guid guid)
         {
             return entities.Items.Where(i => i.VendorId == guid);

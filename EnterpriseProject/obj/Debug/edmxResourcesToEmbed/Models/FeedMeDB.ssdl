@@ -9,13 +9,7 @@
     <EntitySet Name="Items" EntityType="ASPNETDBModel.Store.Items" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MenuItems" EntityType="ASPNETDBModel.Store.MenuItems" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Menus" EntityType="ASPNETDBModel.Store.Menus" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="OrderItems" EntityType="ASPNETDBModel.Store.OrderItems" store:Type="Tables" store:Schema="dbo" store:Name="OrderItems">
-      <DefiningQuery>SELECT 
-      [OrderItems].[OrderId] AS [OrderId], 
-      [OrderItems].[ItemId] AS [ItemId], 
-      [OrderItems].[Quantity] AS [Quantity]
-      FROM [dbo].[OrderItems] AS [OrderItems]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="OrderItems" EntityType="ASPNETDBModel.Store.OrderItems" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Orders" EntityType="ASPNETDBModel.Store.Orders" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Vendors" EntityType="ASPNETDBModel.Store.Vendors" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK__aspnet_Me__UserI__22AA2996" Association="ASPNETDBModel.Store.FK__aspnet_Me__UserI__22AA2996">
@@ -163,18 +157,14 @@
     <Property Name="VendorId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Description" Type="varchar" MaxLength="300" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'C:\USERS\JONATHAN\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\ENTERPRISEPROJECT\ENTERPRISEPROJECT\APP_DATA\ASPNETDB.MDF.dbo.OrderItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
   <EntityType Name="OrderItems">
     <Key>
-      <PropertyRef Name="OrderId" />
-      <PropertyRef Name="ItemId" />
-      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="OrderItemId" />
     </Key>
     <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ItemId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="OrderItemId" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="Orders">
     <Key>
@@ -183,6 +173,7 @@
     <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="VendorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Vendors">
     <Key>

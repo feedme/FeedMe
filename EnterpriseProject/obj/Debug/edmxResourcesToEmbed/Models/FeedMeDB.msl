@@ -95,6 +95,7 @@
     <EntitySetMapping Name="OrderItems">
       <EntityTypeMapping TypeName="ASPNETDBModel.OrderItem">
         <MappingFragment StoreEntitySet="OrderItems">
+          <ScalarProperty Name="OrderItemId" ColumnName="OrderItemId" />
           <ScalarProperty Name="OrderId" ColumnName="OrderId" />
           <ScalarProperty Name="ItemId" ColumnName="ItemId" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
@@ -104,6 +105,7 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="ASPNETDBModel.Order">
         <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="OrderId" ColumnName="OrderId" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="VendorId" ColumnName="VendorId" />

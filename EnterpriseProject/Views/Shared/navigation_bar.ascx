@@ -12,7 +12,7 @@
                 <td>
                     <ul id="filtering-nav" class="nav" style="margin-top: 0px; margin-bottom: 0px;">
                        <li>
-                         <%= Html.ActionLink("Friends", "Index", "Friends", null, new { Class="blue_button", style="width:100px;" })%>
+                         <%= Html.ActionLink("Friends", "Index", "Friends", null, new { id="friends_section",Class="blue_button", style="width:100px;" })%>
                        </li>
                     </ul>
                 </td>
@@ -44,9 +44,12 @@
                 </td>
                 <td>
                     <ul id="filtering-nav" class="nav" style="margin-top: 0px; margin-bottom: 0px;">
-                       <li>
-                        <%= Html.ActionLink("Recent Orders", "Index", "Home", null, new { Class="blue_button", style="width:100px;" })%>
-                       </li>
+                    <% if (Roles.IsUserInRole("Vendor")){ %>
+                        <li><%= Html.ActionLink("Orders", "Orders", "Vendors", null, new { id="orders_section", Class="blue_button", style="width:100px;" })%></li>
+                    <% } %>
+                    <% if (Roles.IsUserInRole("Customer")){ %>
+                        <li><%= Html.ActionLink("Orders", "Index", "Orders", null, new { id = "orders_section", Class = "blue_button", style = "width:100px;" })%></li>
+                    <% } %>
                     </ul>
                 </td>
                 <td>

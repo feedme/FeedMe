@@ -12,11 +12,12 @@
 	</script>
     <h1><%=ViewData["vendorname"] %> Menus</h1>
 
-    <table>
+    <div align="center">
+    <table class="output_table" cellspacing="0">
         <tr>
-            <th></th>
+            <th>Actions</th>
             <th>
-                Description
+                Menu Title
             </th>
         </tr>
 
@@ -37,6 +38,7 @@
     <% } %>
 
     </table>
+    </div>
 
     <p>
         <%: Html.ActionLink("Create New", "Create") %>

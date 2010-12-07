@@ -10,11 +10,12 @@
         $("#vendors_link").addClass("selected");
     });
 </script>
-    <h2>Index</h2>
+    <h1>Choose a Vendor</h1>
 
-    <table>
+    <div align="center">
+    <table class="output_table" cellspacing="0">
         <tr>
-            <th></th>
+            <th>Actions</th>
             <th>
                 Vendor Name
             </th>
@@ -23,7 +24,12 @@
     <% foreach (var item in Model) { %>
     
         <tr>
-            <td></td>
+            <td>
+                 <% using (Html.BeginForm("List", "Menus", new { id=item.VendorId}))
+                                   { %>
+				    <input type="submit" value="View Menus" />
+				<% } %>
+            </td>
             <td>
                 <%: item.aspnet_Users.UserName %>
             </td>
@@ -32,10 +38,7 @@
     <% } %>
 
     </table>
-
-    <p>
-        <%: Html.ActionLink("Create New", "Create") %>
-    </p>
+    </div>
 
 </asp:Content>
 

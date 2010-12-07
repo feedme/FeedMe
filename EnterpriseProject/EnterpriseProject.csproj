@@ -86,6 +86,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Controllers\MenusController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -100,6 +101,8 @@
     <Compile Include="Models\ItemsRepository.cs" />
     <Compile Include="Models\MenuItemsRepository.cs" />
     <Compile Include="Models\MenusRepository.cs" />
+    <Compile Include="Models\OrderItemsRepository.cs" />
+    <Compile Include="Models\OrdersRepository.cs" />
     <Compile Include="Models\ProfileCommon.cs" />
     <Compile Include="Models\VendorsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -164,12 +167,22 @@
     <Content Include="Views\Menus\Details.aspx" />
     <Content Include="Views\Menus\Edit.aspx" />
     <Content Include="Views\Menus\Index.aspx" />
+    <Content Include="Views\Menus\List.aspx" />
+    <Content Include="Views\Menus\Show.aspx" />
+    <Content Include="Views\Orders\Details.aspx" />
+    <Content Include="Views\Orders\ChangeQuantity.aspx" />
+    <Content Include="Views\Orders\Index.aspx" />
+    <Content Include="Views\Orders\Summary.ascx" />
+    <Content Include="Views\Orders\VendorSummary.ascx" />
     <Content Include="Views\Profile\Create.aspx" />
     <Content Include="Views\Profile\Edit.aspx" />
     <Content Include="Views\Profile\Index.aspx" />
     <Content Include="Views\Shared\logon.ascx" />
     <Content Include="Views\Shared\navigation_bar.ascx" />
     <Content Include="Views\Vendors\Index.aspx" />
+    <Content Include="Views\Vendors\OrderDetails.aspx" />
+    <Content Include="Views\Vendors\Orders.aspx" />
+    <Content Include="Views\Vendors\ReceivedOrders.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -214,6 +227,8 @@
     <Content Include="Views\Menus\Menus.Master" />
     <Content Include="Views\Items\Items.Master" />
     <Content Include="Views\Vendors\Vendors.Master" />
+    <Content Include="Views\Friends\Friends.Master" />
+    <Content Include="Views\Orders\Orders.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

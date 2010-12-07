@@ -291,30 +291,36 @@ input[type="password"]
 /* TABLE*/
 ----------------------------------------------------------
 
-table 
+.output_table 
 {
-  border: solid 1px #e8eef4;
-  border-collapse: collapse;
 }
 
-table td 
+.output_table td 
 {
-  padding: 10px;   
-  border: solid 1px #e8eef4;
+  padding: 20px;   
+  font-size: 14px;
+  font-weight:bold;
 }
 
-table tr:hover
+.output_table tr:hover
 {
     background-color: #def;
 }
 
-table th
+.output_table th
 {
+  font-size: 16px;
+  font-weight:bold;
   padding: 6px 5px;
-  text-align: left;
+  text-align: center;
   background-color: #454545;
-  color: White; 
-  border: solid 1px #e8eef4;   
+  color: White;   
+}
+
+.sub-total
+{
+    background-color: Gray;
+    color:White;
 }
 
 #buttons_table td

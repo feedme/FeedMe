@@ -29,8 +29,24 @@ namespace EnterpriseProject.Controllers
             return View(menus);
         }
 
+        [Authorize(Roles = "Customer")]
+        public ActionResult List(Guid id)
+        {
+            Vendor vendor = vendorsRepository.GetVendor(id);
+            ViewData["vendorname"] = vendor.aspnet_Users.UserName;
+            var menus = menusRepository.GetMenusByVendorId(id);
+            return View(menus);
+        }
+
         //
         // GET: /Menus/Details/5
+
+        public ActionResult Show(Guid id)
+        {
+            ViewData["menutitle"] = menusRepository.GetMenu(id).Description;
+            var menuitems = menuitemsRepository.FindAllMenuItems(id);
+            return View(menuitems);
+        }
 
         public ActionResult Details(Guid id)
         {

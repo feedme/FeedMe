@@ -43,10 +43,40 @@
            
         </div>
 
+        <%
+            if (Request.IsAuthenticated) {
+        %>
+        <% if (Roles.IsUserInRole("Customer"))
+           { %>
+        <div id="order_div" style="width:100%;">
+            <div id="order">
+                <% Html.RenderAction("Summary", "Orders");  %>
+            </div>
+        </div>
+        <%} %>
+
+        <% if (Roles.IsUserInRole("Vendor"))
+           { %>
+        <div id="order_div" style="width:100%;">
+            <div id="order">
+                <% Html.RenderAction("VendorSummary", "Orders");  %>
+            </div>
+        </div>
+        <%} %>
+
+        <%} %>
+
         <div id="menucontainer">
             
-            <ul id="menu">              
-                <li><%: Html.ActionLink("Vendors", "Index", "Vendors", null, new {id="vendors_link" })%></li>
+            <ul id="menu"> 
+                <% if (Roles.IsUserInRole("Customer"))
+                { %>             
+                <li><%: Html.ActionLink("Vendors", "Index", "Vendors", null, new { id = "vendors_link" })%></li>
+                <%} %>
+                <% if (Roles.IsUserInRole("Vendor")){ %>
+                    <li><%= Html.ActionLink("Orders", "Orders", "Vendors", null, new { id="orders_link"})%></li>
+                    <li><%= Html.ActionLink("Received Orders", "ReceivedOrders", "Vendors", null, new { id="received_orders_link"})%></li>
+                <% } %>
             </ul>
             
         </div>

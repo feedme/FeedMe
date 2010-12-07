@@ -12,12 +12,10 @@
 	</script>
     <h2>Index</h2>
 
-    <table>
+    <div align="center">
+    <table class="output_table" cellspacing="0">
         <tr>
-            <th></th>
-            <th>
-                ItemId
-            </th>
+            <th>Actions</th>
             <th>
                 Name
             </th>
@@ -26,9 +24,6 @@
             </th>
             <th>
                 Price
-            </th>
-            <th>
-                VendorId
             </th>
         </tr>
 
@@ -41,9 +36,6 @@
                 <%: Html.ActionLink("Delete", "Delete", new { id=item.ItemId })%>
             </td>
             <td>
-                <%: item.ItemId %>
-            </td>
-            <td>
                 <%: item.Name %>
             </td>
             <td>
@@ -52,14 +44,12 @@
             <td>
                 <%: String.Format("{0:F}", item.Price) %>
             </td>
-            <td>
-                <%: item.VendorId %>
-            </td>
         </tr>
     
     <% } %>
 
     </table>
+    </div>
 
     <p>
         <%: Html.ActionLink("Create New", "Create") %>

@@ -8,7 +8,8 @@
 
     <h1>Details for <%=ViewData["menutitle"] %></h1>
 
-    <table>
+    <div align="center">
+    <table class="output_table" cellspacing="0">
         <tr>
             <th></th>
             <th>
@@ -45,6 +46,7 @@
     <% } %>
 
     </table>
+    </div>
 
     <p>
         <%: Html.ActionLink("Create New", "Create") %>

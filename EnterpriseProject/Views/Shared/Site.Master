@@ -43,11 +43,28 @@
            
         </div>
 
+        <%
+            if (Request.IsAuthenticated) {
+        %>
+        <% if (Roles.IsUserInRole("Customer"))
+           { %>
         <div id="order_div" style="width:100%;">
             <div id="order">
-                You have 0 items in your order
+                <% Html.RenderAction("Summary", "Orders");  %>
             </div>
         </div>
+        <%} %>
+
+        <% if (Roles.IsUserInRole("Vendor"))
+           { %>
+        <div id="order_div" style="width:100%;">
+            <div id="order">
+                <% Html.RenderAction("VendorSummary", "Orders");  %>
+            </div>
+        </div>
+        <%} %>
+
+        <%} %>
 
         <div id="menucontainer">
             

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ASPNETDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="ASPNETDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="ASPNETDBModelStoreContainer">
           <EntitySet Name="aspnet_Membership" EntityType="ASPNETDBModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="aspnet_Profile" EntityType="ASPNETDBModel.Store.aspnet_Profile" store:Type="Tables" Schema="dbo" />
@@ -14,13 +14,7 @@
           <EntitySet Name="Items" EntityType="ASPNETDBModel.Store.Items" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="MenuItems" EntityType="ASPNETDBModel.Store.MenuItems" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Menus" EntityType="ASPNETDBModel.Store.Menus" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="OrderItems" EntityType="ASPNETDBModel.Store.OrderItems" store:Type="Tables" store:Schema="dbo" store:Name="OrderItems">
-            <DefiningQuery>SELECT 
-      [OrderItems].[OrderId] AS [OrderId], 
-      [OrderItems].[ItemId] AS [ItemId], 
-      [OrderItems].[Quantity] AS [Quantity]
-      FROM [dbo].[OrderItems] AS [OrderItems]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="OrderItems" EntityType="ASPNETDBModel.Store.OrderItems" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Orders" EntityType="ASPNETDBModel.Store.Orders" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Vendors" EntityType="ASPNETDBModel.Store.Vendors" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK__aspnet_Me__UserI__22AA2996" Association="ASPNETDBModel.Store.FK__aspnet_Me__UserI__22AA2996">
@@ -168,18 +162,14 @@
           <Property Name="VendorId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="300" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'C:\USERS\JONATHAN\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\ENTERPRISEPROJECT\ENTERPRISEPROJECT\APP_DATA\ASPNETDB.MDF.dbo.OrderItems' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <EntityType Name="OrderItems">
           <Key>
-            <PropertyRef Name="OrderId" />
-            <PropertyRef Name="ItemId" />
-            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="OrderItemId" />
           </Key>
           <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="ItemId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="OrderItemId" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -188,6 +178,7 @@
           <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="VendorId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Vendors">
           <Key>
@@ -352,8 +343,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ASPNETDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -518,15 +508,14 @@
         </EntityType>
         <EntityType Name="OrderItem">
           <Key>
-            <PropertyRef Name="OrderId" />
-            <PropertyRef Name="ItemId" />
-            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="OrderItemId" />
           </Key>
           <Property Name="OrderId" Type="Guid" Nullable="false" />
           <Property Name="ItemId" Type="Guid" Nullable="false" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Item" Relationship="ASPNETDBModel.FK_OrderItems_Items" FromRole="OrderItems" ToRole="Items" />
           <NavigationProperty Name="Order" Relationship="ASPNETDBModel.FK_OrderItems_Orders" FromRole="OrderItems" ToRole="Orders" />
+          <Property Type="Guid" Name="OrderItemId" Nullable="false" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -538,6 +527,7 @@
           <NavigationProperty Name="aspnet_Users" Relationship="ASPNETDBModel.FK_Orders_aspnet_Users" FromRole="Orders" ToRole="aspnet_Users" />
           <NavigationProperty Name="OrderItems" Relationship="ASPNETDBModel.FK_OrderItems_Orders" FromRole="Orders" ToRole="OrderItems" />
           <NavigationProperty Name="Vendor" Relationship="ASPNETDBModel.FK_Orders_Vendors" FromRole="Orders" ToRole="Vendors" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Vendor">
           <Key>
@@ -756,12 +746,14 @@
             <ScalarProperty Name="Description" ColumnName="Description" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="OrderItems"><EntityTypeMapping TypeName="ASPNETDBModel.OrderItem"><MappingFragment StoreEntitySet="OrderItems">
-            <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+            <ScalarProperty Name="OrderItemId" ColumnName="OrderItemId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
             <ScalarProperty Name="ItemId" ColumnName="ItemId" />
             <ScalarProperty Name="Quantity" ColumnName="Quantity" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="Orders"><EntityTypeMapping TypeName="ASPNETDBModel.Order"><MappingFragment StoreEntitySet="Orders">
-            <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
             <ScalarProperty Name="UserId" ColumnName="UserId" />
             <ScalarProperty Name="VendorId" ColumnName="VendorId" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>

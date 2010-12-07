@@ -161,15 +161,14 @@
   </EntityType>
   <EntityType Name="OrderItem">
     <Key>
-      <PropertyRef Name="OrderId" />
-      <PropertyRef Name="ItemId" />
-      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="OrderItemId" />
     </Key>
     <Property Name="OrderId" Type="Guid" Nullable="false" />
     <Property Name="ItemId" Type="Guid" Nullable="false" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Item" Relationship="ASPNETDBModel.FK_OrderItems_Items" FromRole="OrderItems" ToRole="Items" />
     <NavigationProperty Name="Order" Relationship="ASPNETDBModel.FK_OrderItems_Orders" FromRole="OrderItems" ToRole="Orders" />
+    <Property Type="Guid" Name="OrderItemId" Nullable="false" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -181,6 +180,7 @@
     <NavigationProperty Name="aspnet_Users" Relationship="ASPNETDBModel.FK_Orders_aspnet_Users" FromRole="Orders" ToRole="aspnet_Users" />
     <NavigationProperty Name="OrderItems" Relationship="ASPNETDBModel.FK_OrderItems_Orders" FromRole="Orders" ToRole="OrderItems" />
     <NavigationProperty Name="Vendor" Relationship="ASPNETDBModel.FK_Orders_Vendors" FromRole="Orders" ToRole="Vendors" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Vendor">
     <Key>

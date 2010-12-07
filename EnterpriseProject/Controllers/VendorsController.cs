@@ -19,6 +19,8 @@ namespace EnterpriseProject.Controllers
         VendorsRepository vendorsRepository = new VendorsRepository();
         ItemsRepository itemsRepository = new ItemsRepository();
         MenuItemsRepository menuitemsRepository = new MenuItemsRepository();
+        OrdersRepository ordersRepository = new OrdersRepository();
+        OrdersItemsRepository orderitemsRepository = new OrdersItemsRepository();
 
         [Authorize(Roles = "Customer")]
         public ActionResult Index()
@@ -28,6 +30,59 @@ namespace EnterpriseProject.Controllers
             return View(vendors);
         }
 
+        [Authorize(Roles = "Vendor")]
+        public ActionResult Orders()
+        {
+            MembershipUser user = Membership.GetUser();
+            Vendor vendor = vendorsRepository.GetVendorByUserId((Guid)user.ProviderUserKey);
+            var orders = ordersRepository.GetOrdersByVendorId(vendor.VendorId);
+            orders = orders.Where(i=>i.Status == "submitted");
+            return View(orders);
+        }
+
+        [Authorize(Roles = "Vendor")]
+        public ActionResult ReceivedOrders()
+        {
+            MembershipUser user = Membership.GetUser();
+            Vendor vendor = vendorsRepository.GetVendorByUserId((Guid)user.ProviderUserKey);
+            var orders = ordersRepository.GetOrdersByVendorId(vendor.VendorId);
+            orders = orders.Where(i => i.Status == "received");
+            return View(orders);
+        }
+
+        [Authorize(Roles = "Vendor")]
+        public ActionResult OrderDetails(Guid id)
+        {
+            var orderitems = orderitemsRepository.GetOrderItemsByOrderId(id);
+            decimal subtotal = 0.00M;
+
+            foreach (var item in orderitems)
+            {
+                subtotal += item.Item.Price * item.Quantity;
+            }
+
+            ViewData["user"] = orderitems.First().Order.aspnet_Users.UserName;
+            ViewData["subtotal"] = subtotal;
+            ViewData["orderid"] = id;
+            ViewData["orderstatus"] = orderitems.First().Order.Status;
+            return View(orderitems);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Vendor")]
+        public ActionResult UpdateOrder(Guid id,string status)
+        {
+            var order = ordersRepository.GetOrder(id);
+            order.Status = status;
+
+            if (TryUpdateModel(order))
+            {
+                ordersRepository.save();
+                return RedirectToAction("Orders");
+            }
+
+            return RedirectToAction("Orders");
+        }
         //
         // GET: /Vendors/Details/5
 

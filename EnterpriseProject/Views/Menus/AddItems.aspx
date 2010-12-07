@@ -8,7 +8,8 @@
 
     <h1>Add Items to <%= ViewData["menutitle"] %></h1>
 
-    <table>
+    <div align="center">
+    <table class="output_table" cellspacing="0">
         <tr>
             <th></th>
             <th>
@@ -46,7 +47,7 @@
     <% } %>
 
     </table>
-
+    </div>
 
 </asp:Content>
 
