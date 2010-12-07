@@ -33,15 +33,15 @@ namespace EnterpriseProject.Models
             }
         }
 
-        public virtual string Bio
+        public virtual string Preferences
         {
             get
             {
-                return ((string)(this.GetPropertyValue("Bio")));
+                return ((string)(this.GetPropertyValue("Preferences")));
             }
             set
             {
-                this.SetPropertyValue("Bio", value);
+                this.SetPropertyValue("Preferences", value);
             }
         }
 
@@ -57,15 +57,15 @@ namespace EnterpriseProject.Models
             }
         }
 
-        public virtual string Street
+        public virtual string Address
         {
             get
             {
-                return ((string)(this.GetPropertyValue("Street")));
+                return ((string)(this.GetPropertyValue("Address")));
             }
             set
             {
-                this.SetPropertyValue("Street", value);
+                this.SetPropertyValue("Address", value);
             }
         }
 

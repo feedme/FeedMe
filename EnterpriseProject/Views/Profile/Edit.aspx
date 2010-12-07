@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Profile/Profile.Master" Inherits="System.Web.Mvc.ViewPage<EnterpriseProject.Models.ProfileCommon>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Edit
+	EditProfile
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -19,7 +19,7 @@
         <fieldset>
             <legend>Edit Profile Fields</legend>
             
-            <div align=center>
+            <div align= "center">
                 <div class="editor-label">
                     <%: Html.LabelFor(model => model.FirstName) %>
                 </div>
@@ -37,11 +37,11 @@
                 </div>
             
                 <div class="editor-label">
-                    <%: Html.LabelFor(model => model.Bio) %>
+                    <%: Html.LabelFor(model => model.Preferences) %>
                 </div>
                 <div class="editor-field">
-                    <%: Html.TextBoxFor(model => model.Bio) %>
-                    <%: Html.ValidationMessageFor(model => model.Bio) %>
+                    <%: Html.TextBoxFor(model => model.Preferences) %>
+                    <%: Html.ValidationMessageFor(model => model.Preferences) %>
                 </div>
             
                 <div class="editor-label">
@@ -53,11 +53,11 @@
                 </div>
             
                 <div class="editor-label">
-                    <%: Html.LabelFor(model => model.Street) %>
+                    <%: Html.LabelFor(model => model.Address) %>
                 </div>
                 <div class="editor-field">
-                    <%: Html.TextBoxFor(model => model.Street) %>
-                    <%: Html.ValidationMessageFor(model => model.Street) %>
+                    <%: Html.TextBoxFor(model => model.Address) %>
+                    <%: Html.ValidationMessageFor(model => model.Address) %>
                 </div>
             
                 <div class="editor-label">
@@ -75,11 +75,11 @@
                     <%: Html.TextBoxFor(model => model.County) %>
                     <%: Html.ValidationMessageFor(model => model.County) %>
                 </div>
-            
                 <p>
                     <input type="submit" value="Save" />
                 </p>
             </div>
+             
         </fieldset>
 
     <% } %>

@@ -31,11 +31,11 @@
                 </div>
             
                 <div class="editor-label">
-                    <%: Html.LabelFor(model => model.Bio) %>
+                    <%: Html.LabelFor(model => model.Preferences) %>
                 </div>
                 <div class="editor-field">
-                    <%: Html.TextBoxFor(model => model.Bio) %>
-                    <%: Html.ValidationMessageFor(model => model.Bio) %>
+                    <%: Html.TextBoxFor(model => model.Preferences) %>
+                    <%: Html.ValidationMessageFor(model => model.Preferences) %>
                 </div>
             
                 <div class="editor-label">
@@ -47,11 +47,11 @@
                 </div>
             
                 <div class="editor-label">
-                    <%: Html.LabelFor(model => model.Street) %>
+                    <%: Html.LabelFor(model => model.Address) %>
                 </div>
                 <div class="editor-field">
-                    <%: Html.TextBoxFor(model => model.Street) %>
-                    <%: Html.ValidationMessageFor(model => model.Street) %>
+                    <%: Html.TextBoxFor(model => model.Address) %>
+                    <%: Html.ValidationMessageFor(model => model.Address) %>
                 </div>
             
                 <div class="editor-label">

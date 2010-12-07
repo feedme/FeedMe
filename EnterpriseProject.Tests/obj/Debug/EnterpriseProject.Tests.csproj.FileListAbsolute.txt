@@ -21,6 +21,7 @@ C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\bin\Debug\Enterprise
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.dll
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.pdb
+<<<<<<< HEAD
 C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject.Tests\bin\Debug\EnterpriseProject.Tests.dll.config
 C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject.Tests\bin\Debug\EnterpriseProject.Tests.dll
 C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject.Tests\bin\Debug\EnterpriseProject.Tests.pdb
@@ -31,3 +32,15 @@ C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject.Tests\bin\
 C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.dll
 C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.pdb
+=======
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\bin\Debug\EnterpriseProject.Tests.dll.config
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\bin\Debug\EnterpriseProject.Tests.dll
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\bin\Debug\EnterpriseProject.Tests.pdb
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\bin\Debug\EnterpriseProject.dll
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\bin\Debug\PagedList.dll
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\bin\Debug\MvcMembership.dll
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\bin\Debug\EnterpriseProject.pdb
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.dll
+C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.pdb
+>>>>>>> 8877a73572bb959b5cd7fbfa1769cbf992406f75
