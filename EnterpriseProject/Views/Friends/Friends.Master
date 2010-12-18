@@ -69,9 +69,8 @@
         <div id="menucontainer">
             
             <ul id="menu">              
-                <li><%: Html.ActionLink("Friends List", "Index", "Friends", null, new {id="list_friends_link" })%></li>
-                <li><%: Html.ActionLink("Recent Friend Activity", "Activity", "Friends", null, new {id="activity_friends_link" })%></li>
-                <li><%: Html.ActionLink("Search for friends", "Search", "Friends", null, new {id="search_friends_link" })%></li>
+                <li><%: Html.ActionLink("Find some friends", "Index", "Friends", null, new {id="list_friends_link" })%></li>
+                <li><%: Html.ActionLink("List your friends", "Show", "Friends", null, new {id="activity_friends_link" })%></li>
             </ul>
             
         </div>

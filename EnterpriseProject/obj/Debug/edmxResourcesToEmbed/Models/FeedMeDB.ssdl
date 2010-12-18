@@ -6,6 +6,7 @@
     <EntitySet Name="aspnet_Roles" EntityType="ASPNETDBModel.Store.aspnet_Roles" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="aspnet_Users" EntityType="ASPNETDBModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="aspnet_UsersInRoles" EntityType="ASPNETDBModel.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Friendships" EntityType="ASPNETDBModel.Store.Friendships" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Items" EntityType="ASPNETDBModel.Store.Items" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="MenuItems" EntityType="ASPNETDBModel.Store.MenuItems" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Menus" EntityType="ASPNETDBModel.Store.Menus" store:Type="Tables" Schema="dbo" />
@@ -27,6 +28,10 @@
     <AssociationSet Name="FK__aspnet_Us__UserI__49C3F6B7" Association="ASPNETDBModel.Store.FK__aspnet_Us__UserI__49C3F6B7">
       <End Role="aspnet_Users" EntitySet="aspnet_Users" />
       <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aspnet_User_Friendships" Association="ASPNETDBModel.Store.FK_aspnet_User_Friendships">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Friendships" EntitySet="Friendships" />
     </AssociationSet>
     <AssociationSet Name="FK_Items_Vendors" Association="ASPNETDBModel.Store.FK_Items_Vendors">
       <End Role="Vendors" EntitySet="Vendors" />
@@ -131,6 +136,14 @@
     <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
+  <EntityType Name="Friendships">
+    <Key>
+      <PropertyRef Name="FriendshipId" />
+    </Key>
+    <Property Name="FriendshipId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FriendId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
   <EntityType Name="Items">
     <Key>
       <PropertyRef Name="ItemId" />
@@ -226,6 +239,18 @@
         <PropertyRef Name="UserId" />
       </Principal>
       <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aspnet_User_Friendships">
+    <End Role="aspnet_Users" Type="ASPNETDBModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="Friendships" Type="ASPNETDBModel.Store.Friendships" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Friendships">
         <PropertyRef Name="UserId" />
       </Dependent>
     </ReferentialConstraint>

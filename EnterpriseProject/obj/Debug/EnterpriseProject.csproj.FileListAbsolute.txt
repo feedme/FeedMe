@@ -1,28 +1,5 @@
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\bin\EnterpriseProject.dll
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\bin\EnterpriseProject.pdb
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\bin\MvcMembership.dll
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\bin\PagedList.dll
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\bin\MvcMembership.pdb
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\bin\PagedList.pdb
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\bin\PagedList.xml
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\obj\Debug\EnterpriseProject.dll
-C:\Users\Jonathan\documents\visual studio 2010\Projects\EnterpriseProject\EnterpriseProject\obj\Debug\EnterpriseProject.pdb
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.dll
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.pdb
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\obj\Debug\EnterpriseProject.dll
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\obj\Debug\EnterpriseProject.pdb
-<<<<<<< HEAD
-C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject\bin\EnterpriseProject.dll
-C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject\bin\EnterpriseProject.pdb
-C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject\obj\Debug\EnterpriseProject.dll
-C:\Users\Jonathan\Desktop\enterprise_project\FeedMe\EnterpriseProject\obj\Debug\EnterpriseProject.pdb
-=======
-C:\Users\Vedd44\Desktop\feedme\EnterpriseProject\bin\EnterpriseProject.dll
-C:\Users\Vedd44\Desktop\feedme\EnterpriseProject\bin\EnterpriseProject.pdb
-C:\Users\Vedd44\Desktop\feedme\EnterpriseProject\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Vedd44\Desktop\feedme\EnterpriseProject\obj\Debug\EnterpriseProject.dll
-C:\Users\Vedd44\Desktop\feedme\EnterpriseProject\obj\Debug\EnterpriseProject.pdb
->>>>>>> 8877a73572bb959b5cd7fbfa1769cbf992406f75

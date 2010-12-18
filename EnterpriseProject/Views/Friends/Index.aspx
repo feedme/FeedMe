@@ -11,19 +11,16 @@
         });
 	</script>
 
-    <h2 style="text-align:center">Showing all users</h2>
+    <h2 style="text-align:center">Showing all users (non-friends)</h2>
     <% foreach (var item in Model) { %>
         <div id="friendlist">
-            <div id="profile_photo">
-                <h7 style="color:#999">Profile flick</h7>
+            <div style="float:left;width:50%">
+                <h6 style="color:#999;"><%: item.UserName %></h6>
             </div>
-            <div style="float:left;padding-left:10px;">
-                <h7 style="color:#999;text-align:center">Bio and all that jazz</h7>
-            </div>
-            <div style="float:right">
-                <h7 style="color:#999;"><%: item.UserName %></h7>
-                <br /><br />
-                <%: Html.ActionLink("Add as friend - TODO", "", "", null) %>
+            <div style="float:right;width:50%">
+                <h6>
+                    <%: Html.ActionLink("Add as friend", "Add", "Friends", new { UserId = item.ProviderUserKey}, null)%>
+                </h6>
             </div>
         </div>
     <% } %>

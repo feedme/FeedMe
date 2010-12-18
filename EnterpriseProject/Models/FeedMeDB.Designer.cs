@@ -30,6 +30,7 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_OrderItems_Orders", "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.Order), "OrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.OrderItem), true)]
 [assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_Orders_Vendors", "Vendors", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.Vendor), "Orders", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Order), true)]
 [assembly: EdmRelationshipAttribute("ASPNETDBModel", "aspnet_UsersInRoles", "aspnet_Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.aspnet_Roles), "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.aspnet_Users))]
+[assembly: EdmRelationshipAttribute("ASPNETDBModel", "FK_aspnet_User_Friendships", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(EnterpriseProject.Models.aspnet_Users), "Friendship", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(EnterpriseProject.Models.Friendship), true)]
 
 #endregion
 
@@ -240,6 +241,22 @@ namespace EnterpriseProject.Models
             }
         }
         private ObjectSet<Vendor> _Vendors;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Friendship> Friendships
+        {
+            get
+            {
+                if ((_Friendships == null))
+                {
+                    _Friendships = base.CreateObjectSet<Friendship>("Friendships");
+                }
+                return _Friendships;
+            }
+        }
+        private ObjectSet<Friendship> _Friendships;
 
         #endregion
         #region AddTo Methods
@@ -322,6 +339,14 @@ namespace EnterpriseProject.Models
         public void AddToVendors(Vendor vendor)
         {
             base.AddObject("Vendors", vendor);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Friendships EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToFriendships(Friendship friendship)
+        {
+            base.AddObject("Friendships", friendship);
         }
 
         #endregion
@@ -1665,6 +1690,176 @@ namespace EnterpriseProject.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<aspnet_Roles>("ASPNETDBModel.aspnet_UsersInRoles", "aspnet_Roles", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_aspnet_User_Friendships", "Friendship")]
+        public EntityCollection<Friendship> Friendships
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Friendship>("ASPNETDBModel.FK_aspnet_User_Friendships", "Friendship");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Friendship>("ASPNETDBModel.FK_aspnet_User_Friendships", "Friendship", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="ASPNETDBModel", Name="Friendship")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Friendship : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Friendship object.
+        /// </summary>
+        /// <param name="friendshipId">Initial value of the FriendshipId property.</param>
+        /// <param name="userId">Initial value of the UserId property.</param>
+        /// <param name="friendId">Initial value of the FriendId property.</param>
+        public static Friendship CreateFriendship(global::System.Guid friendshipId, global::System.Guid userId, global::System.Guid friendId)
+        {
+            Friendship friendship = new Friendship();
+            friendship.FriendshipId = friendshipId;
+            friendship.UserId = userId;
+            friendship.FriendId = friendId;
+            return friendship;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid FriendshipId
+        {
+            get
+            {
+                return _FriendshipId;
+            }
+            set
+            {
+                if (_FriendshipId != value)
+                {
+                    OnFriendshipIdChanging(value);
+                    ReportPropertyChanging("FriendshipId");
+                    _FriendshipId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FriendshipId");
+                    OnFriendshipIdChanged();
+                }
+            }
+        }
+        private global::System.Guid _FriendshipId;
+        partial void OnFriendshipIdChanging(global::System.Guid value);
+        partial void OnFriendshipIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid UserId
+        {
+            get
+            {
+                return _UserId;
+            }
+            set
+            {
+                OnUserIdChanging(value);
+                ReportPropertyChanging("UserId");
+                _UserId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UserId");
+                OnUserIdChanged();
+            }
+        }
+        private global::System.Guid _UserId;
+        partial void OnUserIdChanging(global::System.Guid value);
+        partial void OnUserIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid FriendId
+        {
+            get
+            {
+                return _FriendId;
+            }
+            set
+            {
+                OnFriendIdChanging(value);
+                ReportPropertyChanging("FriendId");
+                _FriendId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FriendId");
+                OnFriendIdChanged();
+            }
+        }
+        private global::System.Guid _FriendId;
+        partial void OnFriendIdChanging(global::System.Guid value);
+        partial void OnFriendIdChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ASPNETDBModel", "FK_aspnet_User_Friendships", "aspnet_Users")]
+        public aspnet_Users aspnet_Users
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("ASPNETDBModel.FK_aspnet_User_Friendships", "aspnet_Users").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("ASPNETDBModel.FK_aspnet_User_Friendships", "aspnet_Users").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<aspnet_Users> aspnet_UsersReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<aspnet_Users>("ASPNETDBModel.FK_aspnet_User_Friendships", "aspnet_Users");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<aspnet_Users>("ASPNETDBModel.FK_aspnet_User_Friendships", "aspnet_Users", value);
                 }
             }
         }

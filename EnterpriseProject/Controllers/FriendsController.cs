@@ -12,30 +12,49 @@ namespace EnterpriseProject.Controllers
 {
     public class FriendsController : Controller
     {
+        FriendshipRepository friendshipRepo = new FriendshipRepository();
+        MembershipUser currentUser = Membership.GetUser();
         //
         // GET: /Friends/
         // Retrieve a list of all users friends
         public ActionResult Index()
         {
             MembershipUserCollection allUsers = Membership.GetAllUsers();
+            var friendList = friendshipRepo.ListAllFriendships((Guid)currentUser.ProviderUserKey);
+            foreach(var friend in friendList) {
+                MembershipUser theFriend = Membership.GetUser(friend.FriendId);
+                allUsers.Remove(theFriend.UserName);
+            }
+            allUsers.Remove(currentUser.UserName);
             return View(allUsers);
         }
 
-        // List all users that are not friends
-        public ActionResult Find()
+        public ActionResult Show()
         {
-            return View();
+            MembershipUserCollection friendsList = new MembershipUserCollection();
+
+            var friends = friendshipRepo.ListAllFriendships((Guid)currentUser.ProviderUserKey);
+            foreach (var f in friends)
+            {
+                MembershipUser theFriend = Membership.GetUser(f.FriendId);
+                friendsList.Add(theFriend);
+            }
+            return View(friendsList);
         }
 
         //Add a friendship
-        [HttpPost]
         public ActionResult Add(Guid UserId)
         {
-            return View();
+            Friendship f = new Friendship();
+            f.UserId = (Guid)currentUser.ProviderUserKey;
+            f.FriendId = UserId;
+            f.FriendshipId = System.Guid.NewGuid();
+            friendshipRepo.Add(f);
+            friendshipRepo.Save();
+            return RedirectToAction("Index");
         }
 
         //Destroy friendship
-        [HttpPost]
         public ActionResult Destroy(Guid UserId)
         {
             return View();

@@ -93,6 +93,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\FriendshipRepository.cs" />
     <Compile Include="Models\FeedMeDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +158,7 @@
     <Content Include="Scripts\jquery-1.4.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.6.custom.min.js" />
     <Content Include="Views\Friends\Index.aspx" />
+    <Content Include="Views\Friends\Show.aspx" />
     <Content Include="Views\Items\Create.aspx" />
     <Content Include="Views\Items\Details.aspx" />
     <Content Include="Views\Items\Index.aspx" />

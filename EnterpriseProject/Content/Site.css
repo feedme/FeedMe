@@ -487,15 +487,16 @@ div#title
 
 #friendlist 
 {
+    clear:both;
     -moz-border-radius: 0.2em;
     -webkit-border-radius: 0.2em;
     border: 1px solid #999;
     width: 60%;
-    height: 80px;
+    height: 45px;
     margin-right: 20%;
     margin-left: 20%;
     margin-bottom: 10px;
-    padding:5px; 
+    padding:2px; 
 }
 
 #profile_photo 
