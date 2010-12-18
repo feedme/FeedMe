@@ -44,3 +44,4 @@ C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\obj\Debug\ResolveAssembly
 C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.dll
 C:\Users\Vedd44\Desktop\feedme\EnterpriseProject.Tests\obj\Debug\EnterpriseProject.Tests.pdb
 >>>>>>> 8877a73572bb959b5cd7fbfa1769cbf992406f75
+C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\bin\Debug\Moq.dll

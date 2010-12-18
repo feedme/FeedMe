@@ -3,3 +3,4 @@ C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.pdb
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\obj\Debug\EnterpriseProject.dll
 C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\obj\Debug\EnterpriseProject.pdb
+C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\Moq.dll

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ff81f8a7-0d45-4a92-835b-1e0cb23c45f7" name="chuck@MEDOZE 2010-12-18 15:46:14" runUser="medoze\chuck" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="850b99ad-b3bc-4ee8-ace8-6933f65d4eed">
+    <Deployment runDeploymentRoot="chuck_MEDOZE 2010-12-18 15_46_14">
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.dll" />
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\NET40\Moq.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-18T15:46:14.9022220+00:00" queuing="2010-12-18T15:46:24.9833788+00:00" start="2010-12-18T15:46:25.6946476+00:00" finish="2010-12-18T15:46:29.3372668+00:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="About" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="b52d15b4-5b56-72cc-4111-5824d79f490b">
+      <Execution id="2b2137fa-4020-4ca9-9e3f-69203bf9c776" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="ffb01ede-271b-d092-f374-540ad14a8553">
+      <Execution id="a5cf2bcb-d039-41ab-b2a1-031e9b6c75b4" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b52d15b4-5b56-72cc-4111-5824d79f490b" executionId="2b2137fa-4020-4ca9-9e3f-69203bf9c776" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffb01ede-271b-d092-f374-540ad14a8553" executionId="a5cf2bcb-d039-41ab-b2a1-031e9b6c75b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2b2137fa-4020-4ca9-9e3f-69203bf9c776" testId="b52d15b4-5b56-72cc-4111-5824d79f490b" testName="About" computerName="MEDOZE" duration="00:00:00.1799558" startTime="2010-12-18T15:46:26.2644652+00:00" endTime="2010-12-18T15:46:28.5547708+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b2137fa-4020-4ca9-9e3f-69203bf9c776">
+    </UnitTestResult>
+    <UnitTestResult executionId="a5cf2bcb-d039-41ab-b2a1-031e9b6c75b4" testId="ffb01ede-271b-d092-f374-540ad14a8553" testName="Index" computerName="MEDOZE" duration="00:00:00.0070601" startTime="2010-12-18T15:46:28.5698188+00:00" endTime="2010-12-18T15:46:28.6430524+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a5cf2bcb-d039-41ab-b2a1-031e9b6c75b4">
+    </UnitTestResult>
+  </Results>
+</TestRun>

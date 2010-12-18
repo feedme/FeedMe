@@ -36,6 +36,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Moq">
+      <HintPath>NET40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="MvcMembership">
       <HintPath>..\..\MembershipStarterKit\MvcMembership\bin\Debug\MvcMembership.dll</HintPath>
     </Reference>
