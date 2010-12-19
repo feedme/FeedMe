@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="10c9ab8b-d545-43cd-95fc-dedf98a09d76" name="chuck@MEDOZE 2010-12-19 20:01:26" runUser="medoze\chuck" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="5ee6d7c0-cd0f-48a0-9c7a-4d2f0025dc8b">
+    <Deployment runDeploymentRoot="chuck_MEDOZE 2010-12-19 20_01_26">
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\NET40\Moq.dll" />
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-19T20:01:26.6485328+00:00" queuing="2010-12-19T20:01:28.8211128+00:00" start="2010-12-19T20:01:29.8431700+00:00" finish="2010-12-19T20:01:35.2543924+00:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="35" executed="35" passed="35" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CanMapToProfile_Delete" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="d53b096d-2483-e810-1522-823faf085a9b">
+      <Execution id="90f9cf43-5091-46cf-8e58-f4a5433c1e14" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToProfile_Delete" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="ffb01ede-271b-d092-f374-540ad14a8553">
+      <Execution id="b238c6ec-72fc-4bbb-bd61-71a9af617c04" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="CanMapToAccounts_ChangePassword" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="7bcd19ef-ff2d-17a1-c799-3ddf15bb07af">
+      <Execution id="0a02719d-1d0e-4d58-9b12-9cbe1fb0e2cc" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToAccounts_ChangePassword" />
+    </UnitTest>
+    <UnitTest name="CanMapToItems_Delete" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="e9eaa444-981a-c42b-7b99-5265517c95c7">
+      <Execution id="1d9da0a0-b681-494b-a521-8ad7e1669ef1" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToItems_Delete" />
+    </UnitTest>
+    <UnitTest name="CanMapToOrders_Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="d955fbc5-cf34-a018-8140-6fa32ee8c124">
+      <Execution id="f7586a25-99b0-437d-8d37-eb81b23cfef1" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToOrders_Index" />
+    </UnitTest>
+    <UnitTest name="CanMapToMenus_Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="eeb81a2a-6753-5288-0068-10e65bbc89fa">
+      <Execution id="6d246f15-eb43-4bf2-98ee-f6c4ec285dbf" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToMenus_Index" />
+    </UnitTest>
+    <UnitTest name="CanMapToAccounts_LogOff" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="80755ce1-26b3-cc24-8304-0a1028eb0c45">
+      <Execution id="6df0d566-ea26-4bcd-92d0-1eddcd735340" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToAccounts_LogOff" />
+    </UnitTest>
+    <UnitTest name="CanMapToHome_About" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="f1cded69-73be-c51a-b3c9-a86464daf6ac">
+      <Execution id="ec225ef2-716a-462e-b28a-ce21d66e6dcc" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToHome_About" />
+    </UnitTest>
+    <UnitTest name="CanMapToMenus_Edit" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="27d09d08-b877-9c4f-4cc1-2005ccb457f3">
+      <Execution id="68bb6cd1-720e-4ab9-aae6-140788b6d0c3" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToMenus_Edit" />
+    </UnitTest>
+    <UnitTest name="CanMapToOrders_AddItemToOrder" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="53b8cb55-a4c0-3f37-3f49-16d8d3851346">
+      <Execution id="10749428-78d8-45d9-ac50-cf14afedb18b" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToOrders_AddItemToOrder" />
+    </UnitTest>
+    <UnitTest name="CanMapToFriends_Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="c54f75ab-f7e6-6644-68eb-e6d40be050c0">
+      <Execution id="991213a1-3d71-46b6-af3c-5d481bed9669" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToFriends_Index" />
+    </UnitTest>
+    <UnitTest name="CanMapToMenus_Delete" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="c55fab6b-c1da-7961-14e2-270ff91d49c0">
+      <Execution id="6365ff8f-2d52-40a2-b4c3-f246a0346338" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToMenus_Delete" />
+    </UnitTest>
+    <UnitTest name="CanMapToItems_Details" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="bf5d368f-0a39-efe6-3c1a-c97e395f41c4">
+      <Execution id="b6e8f130-a53d-453a-abb9-acbfd12d599c" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToItems_Details" />
+    </UnitTest>
+    <UnitTest name="CanMapToProfile_Details" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="104c2f0f-e672-9704-9139-3e913229e7f6">
+      <Execution id="29a34119-196f-455a-bdc4-77793f6957b4" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToProfile_Details" />
+    </UnitTest>
+    <UnitTest name="CanMapToOrders_Delete" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="ca43e38b-5456-a3bd-1a8d-2068e33a0226">
+      <Execution id="04fdb20c-6fd3-4041-9d10-3ee5952cfc2c" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToOrders_Delete" />
+    </UnitTest>
+    <UnitTest name="CanMapToItems_ListMenus" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="3b95ecd8-3904-6c53-ef88-4f2dcec330fd">
+      <Execution id="8a24928c-a9e0-40a5-8f9b-ba4042650465" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToItems_ListMenus" />
+    </UnitTest>
+    <UnitTest name="CanMapToAccounts_LogOn" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="07a472ee-5d51-7c25-c2fe-0a30f9d5d3fd">
+      <Execution id="7510e852-c70a-45ee-a54d-ef9df97eaa30" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToAccounts_LogOn" />
+    </UnitTest>
+    <UnitTest name="CanMapToOrders_Details" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="a77fa605-b52a-aff8-b306-f958efe51190">
+      <Execution id="930a92f9-1867-43ae-a36a-bbfc45545f61" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToOrders_Details" />
+    </UnitTest>
+    <UnitTest name="CanMapToItems_Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="098b2a1a-11ab-a6aa-e5e7-e809ed10fbd0">
+      <Execution id="57979055-e8c9-482d-b17f-edbad1a749d4" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToItems_Index" />
+    </UnitTest>
+    <UnitTest name="CanMapToProfile_Edit" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="adafee9c-e5ff-3cc1-20e8-fba1b620ae42">
+      <Execution id="63c5080c-8e30-404c-9cbf-ee083bdb49c7" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToProfile_Edit" />
+    </UnitTest>
+    <UnitTest name="CanMapToAccounts_ChangePasswordSuccess" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="00ce9a54-4746-e156-d706-7ff260c23010">
+      <Execution id="e98dc58c-cb03-460e-9283-d0a4e7687768" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToAccounts_ChangePasswordSuccess" />
+    </UnitTest>
+    <UnitTest name="CanMapToItems_Edit" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="8fbbf3e5-cd4a-ef0e-7f78-0dedacd0ea78">
+      <Execution id="c70593b6-f50b-4047-bcca-eadd0a90fe62" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToItems_Edit" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="b52d15b4-5b56-72cc-4111-5824d79f490b">
+      <Execution id="36757af3-81e2-491a-a4b3-aeb6780f0d32" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="CanMapToProfile_Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="9da937d5-14df-5ce1-2f95-baf0639ee9c9">
+      <Execution id="017464e2-1bba-4606-bb4e-c874e77ddd43" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToProfile_Index" />
+    </UnitTest>
+    <UnitTest name="CanMapToHome_Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="af336df0-1f56-8226-f009-66bd7b440043">
+      <Execution id="9b0993e3-85d9-4f32-9191-9ec79d9dcc04" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToHome_Index" />
+    </UnitTest>
+    <UnitTest name="CanMapToMenus_AddItems" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="d61874de-fd67-ea70-624f-227ba206bd8e">
+      <Execution id="11cdbf52-83a4-4795-8e2d-5e663700ffb5" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToMenus_AddItems" />
+    </UnitTest>
+    <UnitTest name="CanMapToItems_Create" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="23842cb9-3b8c-e1e3-a514-81d6053cc6b9">
+      <Execution id="3ec6c9e9-1abf-4453-8235-aaf80dc52fcb" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToItems_Create" />
+    </UnitTest>
+    <UnitTest name="CanMapToMenus_Create" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="f37581af-2246-89c4-34ec-1fca2f03acba">
+      <Execution id="0da0017f-5459-449a-aa33-b5e69a2f56ca" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToMenus_Create" />
+    </UnitTest>
+    <UnitTest name="CanMapToAccounts_Register" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="08800c93-4285-307c-1375-d90af60690bb">
+      <Execution id="1cc40bce-9b79-4a2d-82fb-164c4550f9d2" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToAccounts_Register" />
+    </UnitTest>
+    <UnitTest name="CanMapToMenus_Details" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="265ee2a2-ebe1-901f-7f09-80679ab1d00a">
+      <Execution id="764f13cd-cb1e-4965-9cdf-8958183caf2f" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToMenus_Details" />
+    </UnitTest>
+    <UnitTest name="CanMapToOrders_Create" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="627208ef-621d-d169-d927-17122f59e936">
+      <Execution id="8e20debc-4d0c-4c55-8247-b8167f4ce676" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToOrders_Create" />
+    </UnitTest>
+    <UnitTest name="CanMapToMenus_List" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="8f37c71c-9b97-47bc-ad24-a45b092396b3">
+      <Execution id="1a19c3e6-cd18-4d05-ad23-2a6966d29bc1" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToMenus_List" />
+    </UnitTest>
+    <UnitTest name="CanMapToFriends_Show" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="24a88fba-68a9-d2ce-9fc6-d9cd3fc5261a">
+      <Execution id="1e9b7574-be63-46a4-a256-d95560556734" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToFriends_Show" />
+    </UnitTest>
+    <UnitTest name="CanMapToProfile_Create" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="adb831e0-55e2-37f7-b01f-84a308f3fc5c">
+      <Execution id="4e364799-5a0c-48e9-8148-54a2c1d683d8" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToProfile_Create" />
+    </UnitTest>
+    <UnitTest name="CanMapToMenus_Show" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="7130eeff-62d4-e67f-2131-ba2298a0d943">
+      <Execution id="a61af0a1-2682-4703-b3ed-cbf1c1110b53" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.ControllerRoutingTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapToMenus_Show" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="00ce9a54-4746-e156-d706-7ff260c23010" executionId="e98dc58c-cb03-460e-9283-d0a4e7687768" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="07a472ee-5d51-7c25-c2fe-0a30f9d5d3fd" executionId="7510e852-c70a-45ee-a54d-ef9df97eaa30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="08800c93-4285-307c-1375-d90af60690bb" executionId="1cc40bce-9b79-4a2d-82fb-164c4550f9d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="098b2a1a-11ab-a6aa-e5e7-e809ed10fbd0" executionId="57979055-e8c9-482d-b17f-edbad1a749d4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="104c2f0f-e672-9704-9139-3e913229e7f6" executionId="29a34119-196f-455a-bdc4-77793f6957b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23842cb9-3b8c-e1e3-a514-81d6053cc6b9" executionId="3ec6c9e9-1abf-4453-8235-aaf80dc52fcb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24a88fba-68a9-d2ce-9fc6-d9cd3fc5261a" executionId="1e9b7574-be63-46a4-a256-d95560556734" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="265ee2a2-ebe1-901f-7f09-80679ab1d00a" executionId="764f13cd-cb1e-4965-9cdf-8958183caf2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27d09d08-b877-9c4f-4cc1-2005ccb457f3" executionId="68bb6cd1-720e-4ab9-aae6-140788b6d0c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3b95ecd8-3904-6c53-ef88-4f2dcec330fd" executionId="8a24928c-a9e0-40a5-8f9b-ba4042650465" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="53b8cb55-a4c0-3f37-3f49-16d8d3851346" executionId="10749428-78d8-45d9-ac50-cf14afedb18b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="627208ef-621d-d169-d927-17122f59e936" executionId="8e20debc-4d0c-4c55-8247-b8167f4ce676" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7130eeff-62d4-e67f-2131-ba2298a0d943" executionId="a61af0a1-2682-4703-b3ed-cbf1c1110b53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7bcd19ef-ff2d-17a1-c799-3ddf15bb07af" executionId="0a02719d-1d0e-4d58-9b12-9cbe1fb0e2cc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80755ce1-26b3-cc24-8304-0a1028eb0c45" executionId="6df0d566-ea26-4bcd-92d0-1eddcd735340" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8f37c71c-9b97-47bc-ad24-a45b092396b3" executionId="1a19c3e6-cd18-4d05-ad23-2a6966d29bc1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8fbbf3e5-cd4a-ef0e-7f78-0dedacd0ea78" executionId="c70593b6-f50b-4047-bcca-eadd0a90fe62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9da937d5-14df-5ce1-2f95-baf0639ee9c9" executionId="017464e2-1bba-4606-bb4e-c874e77ddd43" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a77fa605-b52a-aff8-b306-f958efe51190" executionId="930a92f9-1867-43ae-a36a-bbfc45545f61" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="adafee9c-e5ff-3cc1-20e8-fba1b620ae42" executionId="63c5080c-8e30-404c-9cbf-ee083bdb49c7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="adb831e0-55e2-37f7-b01f-84a308f3fc5c" executionId="4e364799-5a0c-48e9-8148-54a2c1d683d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="af336df0-1f56-8226-f009-66bd7b440043" executionId="9b0993e3-85d9-4f32-9191-9ec79d9dcc04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b52d15b4-5b56-72cc-4111-5824d79f490b" executionId="36757af3-81e2-491a-a4b3-aeb6780f0d32" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf5d368f-0a39-efe6-3c1a-c97e395f41c4" executionId="b6e8f130-a53d-453a-abb9-acbfd12d599c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c54f75ab-f7e6-6644-68eb-e6d40be050c0" executionId="991213a1-3d71-46b6-af3c-5d481bed9669" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c55fab6b-c1da-7961-14e2-270ff91d49c0" executionId="6365ff8f-2d52-40a2-b4c3-f246a0346338" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca43e38b-5456-a3bd-1a8d-2068e33a0226" executionId="04fdb20c-6fd3-4041-9d10-3ee5952cfc2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d53b096d-2483-e810-1522-823faf085a9b" executionId="90f9cf43-5091-46cf-8e58-f4a5433c1e14" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d61874de-fd67-ea70-624f-227ba206bd8e" executionId="11cdbf52-83a4-4795-8e2d-5e663700ffb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d955fbc5-cf34-a018-8140-6fa32ee8c124" executionId="f7586a25-99b0-437d-8d37-eb81b23cfef1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e9eaa444-981a-c42b-7b99-5265517c95c7" executionId="1d9da0a0-b681-494b-a521-8ad7e1669ef1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eeb81a2a-6753-5288-0068-10e65bbc89fa" executionId="6d246f15-eb43-4bf2-98ee-f6c4ec285dbf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f1cded69-73be-c51a-b3c9-a86464daf6ac" executionId="ec225ef2-716a-462e-b28a-ce21d66e6dcc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f37581af-2246-89c4-34ec-1fca2f03acba" executionId="0da0017f-5459-449a-aa33-b5e69a2f56ca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffb01ede-271b-d092-f374-540ad14a8553" executionId="b238c6ec-72fc-4bbb-bd61-71a9af617c04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e98dc58c-cb03-460e-9283-d0a4e7687768" testId="00ce9a54-4746-e156-d706-7ff260c23010" testName="CanMapToAccounts_ChangePasswordSuccess" computerName="MEDOZE" duration="00:00:01.1060567" startTime="2010-12-19T20:01:29.6977016+00:00" endTime="2010-12-19T20:01:31.8495894+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e98dc58c-cb03-460e-9283-d0a4e7687768">
+    </UnitTestResult>
+    <UnitTestResult executionId="7510e852-c70a-45ee-a54d-ef9df97eaa30" testId="07a472ee-5d51-7c25-c2fe-0a30f9d5d3fd" testName="CanMapToAccounts_LogOn" computerName="MEDOZE" duration="00:00:00.0230434" startTime="2010-12-19T20:01:31.8672524+00:00" endTime="2010-12-19T20:01:31.9503724+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7510e852-c70a-45ee-a54d-ef9df97eaa30">
+    </UnitTestResult>
+    <UnitTestResult executionId="1cc40bce-9b79-4a2d-82fb-164c4550f9d2" testId="08800c93-4285-307c-1375-d90af60690bb" testName="CanMapToAccounts_Register" computerName="MEDOZE" duration="00:00:00.0140096" startTime="2010-12-19T20:01:31.9576454+00:00" endTime="2010-12-19T20:01:32.0064784+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1cc40bce-9b79-4a2d-82fb-164c4550f9d2">
+    </UnitTestResult>
+    <UnitTestResult executionId="57979055-e8c9-482d-b17f-edbad1a749d4" testId="098b2a1a-11ab-a6aa-e5e7-e809ed10fbd0" testName="CanMapToItems_Index" computerName="MEDOZE" duration="00:00:00.0160609" startTime="2010-12-19T20:01:32.0314144+00:00" endTime="2010-12-19T20:01:32.0729744+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="57979055-e8c9-482d-b17f-edbad1a749d4">
+    </UnitTestResult>
+    <UnitTestResult executionId="29a34119-196f-455a-bdc4-77793f6957b4" testId="104c2f0f-e672-9704-9139-3e913229e7f6" testName="CanMapToProfile_Details" computerName="MEDOZE" duration="00:00:00.0295062" startTime="2010-12-19T20:01:32.0812864+00:00" endTime="2010-12-19T20:01:32.1259634+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29a34119-196f-455a-bdc4-77793f6957b4">
+    </UnitTestResult>
+    <UnitTestResult executionId="3ec6c9e9-1abf-4453-8235-aaf80dc52fcb" testId="23842cb9-3b8c-e1e3-a514-81d6053cc6b9" testName="CanMapToItems_Create" computerName="MEDOZE" duration="00:00:00.0196220" startTime="2010-12-19T20:01:32.1457044+00:00" endTime="2010-12-19T20:01:32.2693454+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ec6c9e9-1abf-4453-8235-aaf80dc52fcb">
+    </UnitTestResult>
+    <UnitTestResult executionId="1e9b7574-be63-46a4-a256-d95560556734" testId="24a88fba-68a9-d2ce-9fc6-d9cd3fc5261a" testName="CanMapToFriends_Show" computerName="MEDOZE" duration="00:00:00.0136969" startTime="2010-12-19T20:01:32.2786964+00:00" endTime="2010-12-19T20:01:32.3109054+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e9b7574-be63-46a4-a256-d95560556734">
+    </UnitTestResult>
+    <UnitTestResult executionId="764f13cd-cb1e-4965-9cdf-8958183caf2f" testId="265ee2a2-ebe1-901f-7f09-80679ab1d00a" testName="CanMapToMenus_Details" computerName="MEDOZE" duration="00:00:00.0294269" startTime="2010-12-19T20:01:32.3244124+00:00" endTime="2010-12-19T20:01:32.3909084+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="764f13cd-cb1e-4965-9cdf-8958183caf2f">
+    </UnitTestResult>
+    <UnitTestResult executionId="68bb6cd1-720e-4ab9-aae6-140788b6d0c3" testId="27d09d08-b877-9c4f-4cc1-2005ccb457f3" testName="CanMapToMenus_Edit" computerName="MEDOZE" duration="00:00:00.0725829" startTime="2010-12-19T20:01:32.4231174+00:00" endTime="2010-12-19T20:01:32.5384464+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68bb6cd1-720e-4ab9-aae6-140788b6d0c3">
+    </UnitTestResult>
+    <UnitTestResult executionId="8a24928c-a9e0-40a5-8f9b-ba4042650465" testId="3b95ecd8-3904-6c53-ef88-4f2dcec330fd" testName="CanMapToItems_ListMenus" computerName="MEDOZE" duration="00:00:00.0152038" startTime="2010-12-19T20:01:32.5696164+00:00" endTime="2010-12-19T20:01:32.6142934+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8a24928c-a9e0-40a5-8f9b-ba4042650465">
+    </UnitTestResult>
+    <UnitTestResult executionId="10749428-78d8-45d9-ac50-cf14afedb18b" testId="53b8cb55-a4c0-3f37-3f49-16d8d3851346" testName="CanMapToOrders_AddItemToOrder" computerName="MEDOZE" duration="00:00:00.0333008" startTime="2010-12-19T20:01:32.6236444+00:00" endTime="2010-12-19T20:01:32.6776724+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10749428-78d8-45d9-ac50-cf14afedb18b">
+    </UnitTestResult>
+    <UnitTestResult executionId="8e20debc-4d0c-4c55-8247-b8167f4ce676" testId="627208ef-621d-d169-d927-17122f59e936" testName="CanMapToOrders_Create" computerName="MEDOZE" duration="00:00:00.0202911" startTime="2010-12-19T20:01:32.6859844+00:00" endTime="2010-12-19T20:01:32.7337784+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e20debc-4d0c-4c55-8247-b8167f4ce676">
+    </UnitTestResult>
+    <UnitTestResult executionId="a61af0a1-2682-4703-b3ed-cbf1c1110b53" testId="7130eeff-62d4-e67f-2131-ba2298a0d943" testName="CanMapToMenus_Show" computerName="MEDOZE" duration="00:00:00.0334771" startTime="2010-12-19T20:01:32.7431294+00:00" endTime="2010-12-19T20:01:32.8272884+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a61af0a1-2682-4703-b3ed-cbf1c1110b53">
+    </UnitTestResult>
+    <UnitTestResult executionId="0a02719d-1d0e-4d58-9b12-9cbe1fb0e2cc" testId="7bcd19ef-ff2d-17a1-c799-3ddf15bb07af" testName="CanMapToAccounts_ChangePassword" computerName="MEDOZE" duration="00:00:00.0184802" startTime="2010-12-19T20:01:32.8615754+00:00" endTime="2010-12-19T20:01:32.9093694+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a02719d-1d0e-4d58-9b12-9cbe1fb0e2cc">
+    </UnitTestResult>
+    <UnitTestResult executionId="6df0d566-ea26-4bcd-92d0-1eddcd735340" testId="80755ce1-26b3-cc24-8304-0a1028eb0c45" testName="CanMapToAccounts_LogOff" computerName="MEDOZE" duration="00:00:00.0148144" startTime="2010-12-19T20:01:32.9270324+00:00" endTime="2010-12-19T20:01:32.9613194+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6df0d566-ea26-4bcd-92d0-1eddcd735340">
+    </UnitTestResult>
+    <UnitTestResult executionId="1a19c3e6-cd18-4d05-ad23-2a6966d29bc1" testId="8f37c71c-9b97-47bc-ad24-a45b092396b3" testName="CanMapToMenus_List" computerName="MEDOZE" duration="00:00:00.0190608" startTime="2010-12-19T20:01:32.9717094+00:00" endTime="2010-12-19T20:01:33.0059964+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a19c3e6-cd18-4d05-ad23-2a6966d29bc1">
+    </UnitTestResult>
+    <UnitTestResult executionId="c70593b6-f50b-4047-bcca-eadd0a90fe62" testId="8fbbf3e5-cd4a-ef0e-7f78-0dedacd0ea78" testName="CanMapToItems_Edit" computerName="MEDOZE" duration="00:00:00.0125870" startTime="2010-12-19T20:01:33.0132694+00:00" endTime="2010-12-19T20:01:33.0548294+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c70593b6-f50b-4047-bcca-eadd0a90fe62">
+    </UnitTestResult>
+    <UnitTestResult executionId="017464e2-1bba-4606-bb4e-c874e77ddd43" testId="9da937d5-14df-5ce1-2f95-baf0639ee9c9" testName="CanMapToProfile_Index" computerName="MEDOZE" duration="00:00:00.0228386" startTime="2010-12-19T20:01:33.0776874+00:00" endTime="2010-12-19T20:01:33.1337934+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="017464e2-1bba-4606-bb4e-c874e77ddd43">
+    </UnitTestResult>
+    <UnitTestResult executionId="930a92f9-1867-43ae-a36a-bbfc45545f61" testId="a77fa605-b52a-aff8-b306-f958efe51190" testName="CanMapToOrders_Details" computerName="MEDOZE" duration="00:00:00.0146493" startTime="2010-12-19T20:01:33.1462614+00:00" endTime="2010-12-19T20:01:33.1930164+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="930a92f9-1867-43ae-a36a-bbfc45545f61">
+    </UnitTestResult>
+    <UnitTestResult executionId="63c5080c-8e30-404c-9cbf-ee083bdb49c7" testId="adafee9c-e5ff-3cc1-20e8-fba1b620ae42" testName="CanMapToProfile_Edit" computerName="MEDOZE" duration="00:00:00.0166412" startTime="2010-12-19T20:01:33.2086014+00:00" endTime="2010-12-19T20:01:33.2439274+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="63c5080c-8e30-404c-9cbf-ee083bdb49c7">
+    </UnitTestResult>
+    <UnitTestResult executionId="4e364799-5a0c-48e9-8148-54a2c1d683d8" testId="adb831e0-55e2-37f7-b01f-84a308f3fc5c" testName="CanMapToProfile_Create" computerName="MEDOZE" duration="00:00:00.0120384" startTime="2010-12-19T20:01:33.2595124+00:00" endTime="2010-12-19T20:01:33.3218524+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e364799-5a0c-48e9-8148-54a2c1d683d8">
+    </UnitTestResult>
+    <UnitTestResult executionId="9b0993e3-85d9-4f32-9191-9ec79d9dcc04" testId="af336df0-1f56-8226-f009-66bd7b440043" testName="CanMapToHome_Index" computerName="MEDOZE" duration="00:00:00.0235566" startTime="2010-12-19T20:01:33.3384764+00:00" endTime="2010-12-19T20:01:33.3904264+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9b0993e3-85d9-4f32-9191-9ec79d9dcc04">
+    </UnitTestResult>
+    <UnitTestResult executionId="36757af3-81e2-491a-a4b3-aeb6780f0d32" testId="b52d15b4-5b56-72cc-4111-5824d79f490b" testName="About" computerName="MEDOZE" duration="00:00:00.0064226" startTime="2010-12-19T20:01:33.3997774+00:00" endTime="2010-12-19T20:01:33.4371814+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="36757af3-81e2-491a-a4b3-aeb6780f0d32">
+    </UnitTestResult>
+    <UnitTestResult executionId="b6e8f130-a53d-453a-abb9-acbfd12d599c" testId="bf5d368f-0a39-efe6-3c1a-c97e395f41c4" testName="CanMapToItems_Details" computerName="MEDOZE" duration="00:00:00.0120384" startTime="2010-12-19T20:01:33.4579614+00:00" endTime="2010-12-19T20:01:33.5234184+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6e8f130-a53d-453a-abb9-acbfd12d599c">
+    </UnitTestResult>
+    <UnitTestResult executionId="991213a1-3d71-46b6-af3c-5d481bed9669" testId="c54f75ab-f7e6-6644-68eb-e6d40be050c0" testName="CanMapToFriends_Index" computerName="MEDOZE" duration="00:00:00.0252713" startTime="2010-12-19T20:01:33.5410814+00:00" endTime="2010-12-19T20:01:33.5857584+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="991213a1-3d71-46b6-af3c-5d481bed9669">
+    </UnitTestResult>
+    <UnitTestResult executionId="6365ff8f-2d52-40a2-b4c3-f246a0346338" testId="c55fab6b-c1da-7961-14e2-270ff91d49c0" testName="CanMapToMenus_Delete" computerName="MEDOZE" duration="00:00:00.0179503" startTime="2010-12-19T20:01:33.5961484+00:00" endTime="2010-12-19T20:01:33.6730344+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6365ff8f-2d52-40a2-b4c3-f246a0346338">
+    </UnitTestResult>
+    <UnitTestResult executionId="04fdb20c-6fd3-4041-9d10-3ee5952cfc2c" testId="ca43e38b-5456-a3bd-1a8d-2068e33a0226" testName="CanMapToOrders_Delete" computerName="MEDOZE" duration="00:00:00.0132810" startTime="2010-12-19T20:01:33.6990094+00:00" endTime="2010-12-19T20:01:33.7395304+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04fdb20c-6fd3-4041-9d10-3ee5952cfc2c">
+    </UnitTestResult>
+    <UnitTestResult executionId="90f9cf43-5091-46cf-8e58-f4a5433c1e14" testId="d53b096d-2483-e810-1522-823faf085a9b" testName="CanMapToProfile_Delete" computerName="MEDOZE" duration="00:00:00.0233999" startTime="2010-12-19T20:01:33.7488814+00:00" endTime="2010-12-19T20:01:33.7935584+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90f9cf43-5091-46cf-8e58-f4a5433c1e14">
+    </UnitTestResult>
+    <UnitTestResult executionId="11cdbf52-83a4-4795-8e2d-5e663700ffb5" testId="d61874de-fd67-ea70-624f-227ba206bd8e" testName="CanMapToMenus_AddItems" computerName="MEDOZE" duration="00:00:00.0230962" startTime="2010-12-19T20:01:33.8018704+00:00" endTime="2010-12-19T20:01:33.8881074+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11cdbf52-83a4-4795-8e2d-5e663700ffb5">
+    </UnitTestResult>
+    <UnitTestResult executionId="f7586a25-99b0-437d-8d37-eb81b23cfef1" testId="d955fbc5-cf34-a018-8140-6fa32ee8c124" testName="CanMapToOrders_Index" computerName="MEDOZE" duration="00:00:00.0119990" startTime="2010-12-19T20:01:33.9109654+00:00" endTime="2010-12-19T20:01:33.9431744+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7586a25-99b0-437d-8d37-eb81b23cfef1">
+    </UnitTestResult>
+    <UnitTestResult executionId="1d9da0a0-b681-494b-a521-8ad7e1669ef1" testId="e9eaa444-981a-c42b-7b99-5265517c95c7" testName="CanMapToItems_Delete" computerName="MEDOZE" duration="00:00:00.0280666" startTime="2010-12-19T20:01:33.9660324+00:00" endTime="2010-12-19T20:01:34.0127874+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d9da0a0-b681-494b-a521-8ad7e1669ef1">
+    </UnitTestResult>
+    <UnitTestResult executionId="6d246f15-eb43-4bf2-98ee-f6c4ec285dbf" testId="eeb81a2a-6753-5288-0068-10e65bbc89fa" testName="CanMapToMenus_Index" computerName="MEDOZE" duration="00:00:00.0165515" startTime="2010-12-19T20:01:34.0221384+00:00" endTime="2010-12-19T20:01:34.0605814+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d246f15-eb43-4bf2-98ee-f6c4ec285dbf">
+    </UnitTestResult>
+    <UnitTestResult executionId="ec225ef2-716a-462e-b28a-ce21d66e6dcc" testId="f1cded69-73be-c51a-b3c9-a86464daf6ac" testName="CanMapToHome_About" computerName="MEDOZE" duration="00:00:00.0140123" startTime="2010-12-19T20:01:34.0782444+00:00" endTime="2010-12-19T20:01:34.1156484+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec225ef2-716a-462e-b28a-ce21d66e6dcc">
+    </UnitTestResult>
+    <UnitTestResult executionId="0da0017f-5459-449a-aa33-b5e69a2f56ca" testId="f37581af-2246-89c4-34ec-1fca2f03acba" testName="CanMapToMenus_Create" computerName="MEDOZE" duration="00:00:00.0230414" startTime="2010-12-19T20:01:34.1260384+00:00" endTime="2010-12-19T20:01:34.1675984+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0da0017f-5459-449a-aa33-b5e69a2f56ca">
+    </UnitTestResult>
+    <UnitTestResult executionId="b238c6ec-72fc-4bbb-bd61-71a9af617c04" testId="ffb01ede-271b-d092-f374-540ad14a8553" testName="Index" computerName="MEDOZE" duration="00:00:00.0040438" startTime="2010-12-19T20:01:34.1759104+00:00" endTime="2010-12-19T20:01:34.2081194+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b238c6ec-72fc-4bbb-bd61-71a9af617c04">
+    </UnitTestResult>
+  </Results>
+</TestRun>

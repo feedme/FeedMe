@@ -252,5 +252,295 @@ namespace EnterpriseProject.Tests.Controllers
             Assert.AreEqual("Items", routeData.Values["Controller"]);
             Assert.AreEqual("Delete", routeData.Values["action"]);
         }
+
+        [TestMethod]
+        public void CanMapToMenus_Index()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Menus/Index");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Menus", routeData.Values["Controller"]);
+            Assert.AreEqual("Index", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToMenus_List()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Menus/List");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Menus", routeData.Values["Controller"]);
+            Assert.AreEqual("List", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToMenus_Show()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Menus/Show");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Menus", routeData.Values["Controller"]);
+            Assert.AreEqual("Show", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToMenus_Details()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Menus/Details");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Menus", routeData.Values["Controller"]);
+            Assert.AreEqual("Details", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToMenus_Create()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Menus/Create");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Menus", routeData.Values["Controller"]);
+            Assert.AreEqual("Create", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToMenus_Edit()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Menus/Edit");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Menus", routeData.Values["Controller"]);
+            Assert.AreEqual("Edit", routeData.Values["action"]);
+        }
+
+
+        [TestMethod]
+        public void CanMapToMenus_AddItems()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Menus/AddItems");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Menus", routeData.Values["Controller"]);
+            Assert.AreEqual("AddItems", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToMenus_Delete()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Menus/Delete");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Menus", routeData.Values["Controller"]);
+            Assert.AreEqual("Delete", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToOrders_Index()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Orders/Index");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Orders", routeData.Values["Controller"]);
+            Assert.AreEqual("Index", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToOrders_Details()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Orders/Details");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Orders", routeData.Values["Controller"]);
+            Assert.AreEqual("Details", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToOrders_AddItemToOrder()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Orders/AddItemToOrder");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Orders", routeData.Values["Controller"]);
+            Assert.AreEqual("AddItemToOrder", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToOrders_Create()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Orders/Create");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Orders", routeData.Values["Controller"]);
+            Assert.AreEqual("Create", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToOrders_Delete()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Orders/Delete");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Orders", routeData.Values["Controller"]);
+            Assert.AreEqual("Delete", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToProfile_Index()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Profile/Index");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Profile", routeData.Values["Controller"]);
+            Assert.AreEqual("Index", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToProfile_Details()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Profile/Details");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Profile", routeData.Values["Controller"]);
+            Assert.AreEqual("Details", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToProfile_Create()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Profile/Create");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Profile", routeData.Values["Controller"]);
+            Assert.AreEqual("Create", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToProfile_Edit()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Profile/Edit");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Profile", routeData.Values["Controller"]);
+            Assert.AreEqual("Edit", routeData.Values["action"]);
+        }
+
+        [TestMethod]
+        public void CanMapToProfile_Delete()
+        {
+            RouteCollection routes = new RouteCollection();
+            MvcApplication.RegisterRoutes(routes);
+            var httpContextMock = new Mock<HttpContextBase>();
+            httpContextMock.Setup(c => c.Request
+            .AppRelativeCurrentExecutionFilePath).Returns("~/Profile/Delete");
+            //act
+            RouteData routeData = routes.GetRouteData(httpContextMock.Object);
+            //assert
+            Assert.IsNotNull(routeData, "Should have found the route");
+            Assert.AreEqual("Profile", routeData.Values["Controller"]);
+            Assert.AreEqual("Delete", routeData.Values["action"]);
+        }
+
     }
 }
