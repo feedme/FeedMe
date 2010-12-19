@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="28b535ca-9fcb-4518-81a9-8af9dbfb2b95" name="chuck@MEDOZE 2010-12-19 18:21:11" runUser="medoze\chuck" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="165878ea-ed2f-4020-b11f-3876b311636a">
+    <Deployment runDeploymentRoot="chuck_MEDOZE 2010-12-19 18_21_11">
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\NET40\Moq.dll" />
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-19T18:21:11.2422465+00:00" queuing="2010-12-19T18:21:12.8170561+00:00" start="2010-12-19T18:21:13.2042689+00:00" finish="2010-12-19T18:21:15.8217409+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="4" executed="4" passed="3" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="LogOn" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="fd707946-62aa-cf95-8617-a7c4ee2b589f">
+      <Execution id="ec159f30-fd6d-486c-92ba-c1b4e5b6f9b0" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.AccountControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="ffb01ede-271b-d092-f374-540ad14a8553">
+      <Execution id="669a7ccd-fe5f-4e12-bf4a-8dc234551fc9" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="Register" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="54894f8c-50bd-95bc-c887-aa07ff266cc0">
+      <Execution id="e214fee9-92ba-43ec-8401-a130055e760f" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.AccountControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="b52d15b4-5b56-72cc-4111-5824d79f490b">
+      <Execution id="01808422-d0f5-4b66-abec-1e1b0abc4421" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="54894f8c-50bd-95bc-c887-aa07ff266cc0" executionId="e214fee9-92ba-43ec-8401-a130055e760f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b52d15b4-5b56-72cc-4111-5824d79f490b" executionId="01808422-d0f5-4b66-abec-1e1b0abc4421" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd707946-62aa-cf95-8617-a7c4ee2b589f" executionId="ec159f30-fd6d-486c-92ba-c1b4e5b6f9b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffb01ede-271b-d092-f374-540ad14a8553" executionId="669a7ccd-fe5f-4e12-bf4a-8dc234551fc9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e214fee9-92ba-43ec-8401-a130055e760f" testId="54894f8c-50bd-95bc-c887-aa07ff266cc0" testName="Register" computerName="MEDOZE" duration="00:00:00.1775382" startTime="2010-12-19T18:21:13.5406465+00:00" endTime="2010-12-19T18:21:14.9099521+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e214fee9-92ba-43ec-8401-a130055e760f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method EnterpriseProject.Tests.Controllers.AccountControllerTest.Register threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at EnterpriseProject.Controllers.AccountController.Register() in C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\Controllers\AccountController.cs:line 85
+   at EnterpriseProject.Tests.Controllers.AccountControllerTest.Register() in C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\Controllers\AccountControllerTest.cs:line 28
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="01808422-d0f5-4b66-abec-1e1b0abc4421" testId="b52d15b4-5b56-72cc-4111-5824d79f490b" testName="About" computerName="MEDOZE" duration="00:00:00.2126200" startTime="2010-12-19T18:21:14.9607873+00:00" endTime="2010-12-19T18:21:15.2128001+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01808422-d0f5-4b66-abec-1e1b0abc4421">
+    </UnitTestResult>
+    <UnitTestResult executionId="ec159f30-fd6d-486c-92ba-c1b4e5b6f9b0" testId="fd707946-62aa-cf95-8617-a7c4ee2b589f" testName="LogOn" computerName="MEDOZE" duration="00:00:00.0040147" startTime="2010-12-19T18:21:15.2679617+00:00" endTime="2010-12-19T18:21:15.3285313+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec159f30-fd6d-486c-92ba-c1b4e5b6f9b0">
+    </UnitTestResult>
+    <UnitTestResult executionId="669a7ccd-fe5f-4e12-bf4a-8dc234551fc9" testId="ffb01ede-271b-d092-f374-540ad14a8553" testName="Index" computerName="MEDOZE" duration="00:00:00.0050257" startTime="2010-12-19T18:21:15.3382657+00:00" endTime="2010-12-19T18:21:15.3685505+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="669a7ccd-fe5f-4e12-bf4a-8dc234551fc9">
+    </UnitTestResult>
+  </Results>
+</TestRun>

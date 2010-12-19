@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="96a24990-1db0-4bc2-a530-691bd2c9ea1c" name="chuck@MEDOZE 2010-12-19 18:58:04" runUser="medoze\chuck" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="23e383ac-35ec-46fc-bf6a-e4d4d0f34c4f">
+    <Deployment runDeploymentRoot="chuck_MEDOZE 2010-12-19 18_58_04">
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\NET40\Moq.dll" />
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-19T18:58:04.8684789+00:00" queuing="2010-12-19T18:58:06.7160996+00:00" start="2010-12-19T18:58:07.0307556+00:00" finish="2010-12-19T18:58:13.9118890+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="4" executed="4" passed="3" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MEDOZE" outcome="Warning" timestamp="2010-12-19T18:58:14.5107187+00:00">
+        <Text>Could not obtain result files from 'C:\Users\chuck\Desktop\repos\FeedMe\TestResults\chuck_MEDOZE 2010-12-19 18_58_04\In'.</Text>
+        <Exception>System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\chuck\Desktop\repos\FeedMe\TestResults\chuck_MEDOZE 2010-12-19 18_58_04\In\'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler)
+   at System.IO.Directory.InternalGetFileDirectoryNames(String path, String userPathOriginal, String searchPattern, Boolean includeFiles, Boolean includeDirs, SearchOption searchOption)
+   at System.IO.Directory.GetFileSystemEntries(String path)
+   at Microsoft.VisualStudio.TestTools.Common.DirectoryTree.get_IsEmpty()
+   at Microsoft.VisualStudio.TestTools.TestManagement.Tmi.UpdateTestRunAndTestCaseResults(TestRun testRun)</Exception>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="LogOn" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="fd707946-62aa-cf95-8617-a7c4ee2b589f">
+      <Execution id="d198d69e-5cd2-4372-b6cf-6df4f13b1726" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.AccountControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="ffb01ede-271b-d092-f374-540ad14a8553">
+      <Execution id="4b73fa21-2386-4618-9ee6-5af420a9f328" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="CanMapDefaultRoute" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="b1e046d1-b1de-68b6-2d36-c7a9bf17c36e">
+      <Execution id="63998785-6ee4-42ae-9ad2-78b200124553" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.FriendsControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CanMapDefaultRoute" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="b52d15b4-5b56-72cc-4111-5824d79f490b">
+      <Execution id="ceafd251-6ef0-4cca-b20f-4714db7898c5" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b1e046d1-b1de-68b6-2d36-c7a9bf17c36e" executionId="63998785-6ee4-42ae-9ad2-78b200124553" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b52d15b4-5b56-72cc-4111-5824d79f490b" executionId="ceafd251-6ef0-4cca-b20f-4714db7898c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd707946-62aa-cf95-8617-a7c4ee2b589f" executionId="d198d69e-5cd2-4372-b6cf-6df4f13b1726" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffb01ede-271b-d092-f374-540ad14a8553" executionId="4b73fa21-2386-4618-9ee6-5af420a9f328" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="63998785-6ee4-42ae-9ad2-78b200124553" testId="b1e046d1-b1de-68b6-2d36-c7a9bf17c36e" testName="CanMapDefaultRoute" computerName="MEDOZE" duration="00:00:05.2381283" startTime="2010-12-19T18:58:07.3237790+00:00" endTime="2010-12-19T18:58:13.1429484+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="63998785-6ee4-42ae-9ad2-78b200124553">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;product&gt;. Actual:&lt;products&gt;. </Message>
+          <StackTrace>   at EnterpriseProject.Tests.Controllers.FriendsControllerTest.CanMapDefaultRoute() in C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\Controllers\FriendsControllerTest.cs:line 29
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ceafd251-6ef0-4cca-b20f-4714db7898c5" testId="b52d15b4-5b56-72cc-4111-5824d79f490b" testName="About" computerName="MEDOZE" duration="00:00:00.0096308" startTime="2010-12-19T18:58:13.1596645+00:00" endTime="2010-12-19T18:58:13.2481615+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ceafd251-6ef0-4cca-b20f-4714db7898c5">
+    </UnitTestResult>
+    <UnitTestResult executionId="d198d69e-5cd2-4372-b6cf-6df4f13b1726" testId="fd707946-62aa-cf95-8617-a7c4ee2b589f" testName="LogOn" computerName="MEDOZE" duration="00:00:00.0163596" startTime="2010-12-19T18:58:13.2560279+00:00" endTime="2010-12-19T18:58:13.2865102+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d198d69e-5cd2-4372-b6cf-6df4f13b1726">
+    </UnitTestResult>
+    <UnitTestResult executionId="4b73fa21-2386-4618-9ee6-5af420a9f328" testId="ffb01ede-271b-d092-f374-540ad14a8553" testName="Index" computerName="MEDOZE" duration="00:00:00.0054822" startTime="2010-12-19T18:58:13.2943766+00:00" endTime="2010-12-19T18:58:13.3228923+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b73fa21-2386-4618-9ee6-5af420a9f328">
+    </UnitTestResult>
+  </Results>
+</TestRun>

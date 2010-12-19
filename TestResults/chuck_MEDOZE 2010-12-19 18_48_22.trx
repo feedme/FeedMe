@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="47692c9b-a7ef-4dfb-ad57-9d67403ed5ac" name="chuck@MEDOZE 2010-12-19 18:48:22" runUser="medoze\chuck" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="434862b0-670c-4693-90cc-0c2380c1e476">
+    <Deployment runDeploymentRoot="chuck_MEDOZE 2010-12-19 18_48_22">
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\NET40\Moq.dll" />
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-19T18:48:22.8464890+00:00" queuing="2010-12-19T18:48:24.2195194+00:00" start="2010-12-19T18:48:24.6459097+00:00" finish="2010-12-19T18:48:27.8281937+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="4" executed="4" passed="3" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="LogOn" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="fd707946-62aa-cf95-8617-a7c4ee2b589f">
+      <Execution id="5b94e259-87aa-4d3a-afc2-c5da11fc1f2c" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.AccountControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="ffb01ede-271b-d092-f374-540ad14a8553">
+      <Execution id="abf5f2ce-3989-4c41-a8f3-64d5281cb580" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="cdef8225-c64e-401f-27b2-c9d5c3528419">
+      <Execution id="f5cf1e43-65dc-4d3e-9dfb-aee6b41a5b76" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.FriendsControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="b52d15b4-5b56-72cc-4111-5824d79f490b">
+      <Execution id="3bc222cb-4d67-42aa-9837-2408eb7a5666" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.HomeControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b52d15b4-5b56-72cc-4111-5824d79f490b" executionId="3bc222cb-4d67-42aa-9837-2408eb7a5666" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cdef8225-c64e-401f-27b2-c9d5c3528419" executionId="f5cf1e43-65dc-4d3e-9dfb-aee6b41a5b76" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd707946-62aa-cf95-8617-a7c4ee2b589f" executionId="5b94e259-87aa-4d3a-afc2-c5da11fc1f2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffb01ede-271b-d092-f374-540ad14a8553" executionId="abf5f2ce-3989-4c41-a8f3-64d5281cb580" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3bc222cb-4d67-42aa-9837-2408eb7a5666" testId="b52d15b4-5b56-72cc-4111-5824d79f490b" testName="About" computerName="MEDOZE" duration="00:00:00.1183116" startTime="2010-12-19T18:48:24.8309470+00:00" endTime="2010-12-19T18:48:25.6086400+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3bc222cb-4d67-42aa-9837-2408eb7a5666">
+    </UnitTestResult>
+    <UnitTestResult executionId="f5cf1e43-65dc-4d3e-9dfb-aee6b41a5b76" testId="cdef8225-c64e-401f-27b2-c9d5c3528419" testName="Index" computerName="MEDOZE" duration="00:00:01.7580589" startTime="2010-12-19T18:48:25.6327753+00:00" endTime="2010-12-19T18:48:27.2140844+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f5cf1e43-65dc-4d3e-9dfb-aee6b41a5b76">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method EnterpriseProject.Tests.Controllers.FriendsControllerTest.Index threw exception: 
+System.ArgumentException: The specified named connection is either not found in the configuration, not intended to be used with the EntityClient provider, or not valid.</Message>
+          <StackTrace>    at System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   at System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   at System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   at System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   at EnterpriseProject.Models.FeedMeEntities..ctor() in C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\Models\FeedMeDB.Designer.cs:line 51
+   at EnterpriseProject.Models.FriendshipRepository..ctor() in C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\Models\FriendshipRepository.cs:line 10
+   at EnterpriseProject.Controllers.FriendsController..ctor() in C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\Controllers\FriendsController.cs:line 15
+   at EnterpriseProject.Tests.Controllers.FriendsControllerTest.Index() in C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\Controllers\FriendsControllerTest.cs:line 18
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5b94e259-87aa-4d3a-afc2-c5da11fc1f2c" testId="fd707946-62aa-cf95-8617-a7c4ee2b589f" testName="LogOn" computerName="MEDOZE" duration="00:00:00.0084882" startTime="2010-12-19T18:48:27.2283868+00:00" endTime="2010-12-19T18:48:27.2748696+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b94e259-87aa-4d3a-afc2-c5da11fc1f2c">
+    </UnitTestResult>
+    <UnitTestResult executionId="abf5f2ce-3989-4c41-a8f3-64d5281cb580" testId="ffb01ede-271b-d092-f374-540ad14a8553" testName="Index" computerName="MEDOZE" duration="00:00:00.0039988" startTime="2010-12-19T18:48:27.2820208+00:00" endTime="2010-12-19T18:48:27.3070500+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="abf5f2ce-3989-4c41-a8f3-64d5281cb580">
+    </UnitTestResult>
+  </Results>
+</TestRun>

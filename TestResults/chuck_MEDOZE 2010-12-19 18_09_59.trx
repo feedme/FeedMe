@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="fc283695-01b8-40d9-a914-7d556ba9167f" name="chuck@MEDOZE 2010-12-19 18:09:59" runUser="medoze\chuck" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="fece132c-497b-4900-9009-600d8acfd8cc">
+    <Deployment runDeploymentRoot="chuck_MEDOZE 2010-12-19 18_09_59">
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\NET40\Moq.dll" />
+      <DeploymentItem filename="C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\bin\EnterpriseProject.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-19T18:09:59.6947725+00:00" queuing="2010-12-19T18:10:00.4792749+00:00" start="2010-12-19T18:10:00.8976093+00:00" finish="2010-12-19T18:10:02.2900509+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Register" storage="c:\users\chuck\desktop\repos\feedme\enterpriseproject.tests\bin\debug\enterpriseproject.tests.dll" id="54894f8c-50bd-95bc-c887-aa07ff266cc0">
+      <Execution id="f72b0f6e-eda9-45b0-a669-496c58c52fba" />
+      <TestMethod codeBase="C:/Users/chuck/Desktop/repos/FeedMe/EnterpriseProject.Tests/bin/Debug/EnterpriseProject.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EnterpriseProject.Tests.Controllers.AccountControllerTest, EnterpriseProject.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="54894f8c-50bd-95bc-c887-aa07ff266cc0" executionId="f72b0f6e-eda9-45b0-a669-496c58c52fba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f72b0f6e-eda9-45b0-a669-496c58c52fba" testId="54894f8c-50bd-95bc-c887-aa07ff266cc0" testName="Register" computerName="MEDOZE" duration="00:00:00.1342452" startTime="2010-12-19T18:10:01.0581213+00:00" endTime="2010-12-19T18:10:01.8847581+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f72b0f6e-eda9-45b0-a669-496c58c52fba">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method EnterpriseProject.Tests.Controllers.AccountControllerTest.Register threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at EnterpriseProject.Controllers.AccountController.Register() in C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject\Controllers\AccountController.cs:line 85
+   at EnterpriseProject.Tests.Controllers.AccountControllerTest.Register() in C:\Users\chuck\Desktop\repos\FeedMe\EnterpriseProject.Tests\Controllers\AccountControllerTest.cs:line 28
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
